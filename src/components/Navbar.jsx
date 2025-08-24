@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import DarkModeToggle from './DarkModeToggle';
 import logo from '../../public/logo.png';
@@ -11,8 +11,40 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  // Close mobile menu when location changes
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [location]);
+
+  // Handle body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+
+    // Cleanup function to remove class when component unmounts
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [isOpen]);
+
   const handleDropdownToggle = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const handleMobileNavigation = () => {
+    // Close mobile menu
+    setIsOpen(false);
+    setActiveDropdown(null);
+    
+    // Scroll to top of page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -21,7 +53,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-3 group">
+            <Link to="/" className="flex items-center space-x-3 group" onClick={handleMobileNavigation}>
               {/* <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
                 <span className="text-white font-bold text-lg sm:text-xl">S</span>
               </div> */}
@@ -213,7 +245,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50 animate-fade-in-down">
+        <div className="lg:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50 animate-fade-in-down mobile-nav-scrollable mobile-nav-container">
           <div className="px-4 py-2 space-y-1">
             <Link
               to="/"
@@ -222,7 +254,7 @@ const Navbar = () => {
                   ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                   : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={handleMobileNavigation}
             >
               Home
             </Link>
@@ -241,7 +273,7 @@ const Navbar = () => {
                       ? 'text-blue-700 dark:text-blue-400'
                       : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleMobileNavigation}
                 >
                   {item.name}
                 </Link>
@@ -262,7 +294,7 @@ const Navbar = () => {
                       ? 'text-blue-700 dark:text-blue-400'
                       : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleMobileNavigation}
                 >
                   {item.name}
                 </Link>
@@ -276,7 +308,7 @@ const Navbar = () => {
                   ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                   : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={handleMobileNavigation}
             >
               Gallery
             </Link>
@@ -288,7 +320,7 @@ const Navbar = () => {
                   ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                   : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={handleMobileNavigation}
             >
               Blog
             </Link>
@@ -300,7 +332,7 @@ const Navbar = () => {
                   ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                   : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={handleMobileNavigation}
             >
               Contact Us
             </Link>
@@ -319,7 +351,7 @@ const Navbar = () => {
                       ? 'text-blue-700 dark:text-blue-400'
                       : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleMobileNavigation}
                 >
                   {item.name}
                 </Link>

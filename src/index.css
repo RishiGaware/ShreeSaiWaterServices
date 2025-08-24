@@ -475,3 +475,60 @@ html {
     @apply border border-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-border;
   }
 }
+
+/* Mobile Navigation Scrolling */
+.mobile-nav-scrollable {
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Custom scrollbar for mobile navigation */
+.mobile-nav-scrollable::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-nav-scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mobile-nav-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 2px;
+}
+
+.mobile-nav-scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.8);
+}
+
+/* Ensure mobile navigation doesn't exceed viewport */
+@media (max-width: 1023px) {
+  .mobile-nav-container {
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Ensure mobile navigation works properly */
+@media (max-width: 1023px) {
+  .mobile-nav-open {
+    overflow: hidden;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper z-index for mobile navigation */
+.mobile-nav-overlay {
+  z-index: 40;
+}
