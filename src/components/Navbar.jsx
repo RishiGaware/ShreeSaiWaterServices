@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import DarkModeToggle from './DarkModeToggle';
 import logo from '../../public/logo.png';
+import { companyPages, productPages, policyPages } from '../constants/companyInfo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,29 +10,6 @@ const Navbar = () => {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
-
-  const companyDropdown = [
-    { name: 'About Us', path: '/company/about-us' },
-    { name: 'Infrastructure', path: '/company/infrastructure' },
-    { name: 'Leadership', path: '/company/leadership' },
-    { name: 'Our Team', path: '/company/our-team' },
-    { name: 'Careers', path: '/company/careers' },
-    { name: 'Vendor', path: '/company/vendor' },
-    { name: 'Certificates', path: '/company/certificates' },
-    { name: 'Corporate Social Responsibility', path: '/company/corporate-social-responsibility' }
-  ];
-
-  const productsDropdown = [
-    { name: 'Water Treatment Plant', path: '/products/water-treatment' },
-    { name: 'Waste Water Treatment', path: '/products/waste-water-treatment' },
-    { name: 'Manufacturing', path: '/products/manufacturing' },
-    { name: 'Services', path: '/products/services' }
-  ];
-
-  const policiesDropdown = [
-    { name: 'Privacy Policy', path: '/policies/privacy-policy' },
-    { name: 'Terms of Use', path: '/policies/terms-of-use' }
-  ];
 
   const handleDropdownToggle = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
@@ -75,7 +53,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleDropdownToggle('company')}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center space-x-1 ${
-                  activeDropdown === 'company' || companyDropdown.some(item => isActive(item.path))
+                  activeDropdown === 'company' || companyPages.some(item => isActive(item.path))
                     ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                     : 'text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                 }`}
@@ -88,7 +66,7 @@ const Navbar = () => {
               
               {activeDropdown === 'company' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-xl shadow-xl border border-gray-200/50 dark:border-gray-700/50 py-2 animate-fade-in-down">
-                  {companyDropdown.map((item) => (
+                  {companyPages.map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
@@ -111,7 +89,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleDropdownToggle('products')}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center space-x-1 ${
-                  activeDropdown === 'products' || productsDropdown.some(item => isActive(item.path))
+                  activeDropdown === 'products' || productPages.some(item => isActive(item.path))
                     ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                     : 'text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                 }`}
@@ -124,7 +102,7 @@ const Navbar = () => {
               
               {activeDropdown === 'products' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-xl shadow-xl border border-gray-200/50 dark:border-gray-700/50 py-2 animate-fade-in-down">
-                  {productsDropdown.map((item) => (
+                  {productPages.map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
@@ -180,7 +158,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleDropdownToggle('policies')}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center space-x-1 ${
-                  activeDropdown === 'policies' || policiesDropdown.some(item => isActive(item.path))
+                  activeDropdown === 'policies' || policyPages.some(item => isActive(item.path))
                     ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
                     : 'text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                 }`}
@@ -193,7 +171,7 @@ const Navbar = () => {
               
               {activeDropdown === 'policies' && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-xl shadow-xl border border-gray-200/50 dark:border-gray-700/50 py-2 animate-fade-in-down">
-                  {policiesDropdown.map((item) => (
+                  {policyPages.map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
@@ -254,7 +232,7 @@ const Navbar = () => {
               <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Company
               </div>
-              {companyDropdown.map((item) => (
+              {companyPages.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -275,7 +253,7 @@ const Navbar = () => {
               <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Products
               </div>
-              {productsDropdown.map((item) => (
+              {productPages.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -332,7 +310,7 @@ const Navbar = () => {
               <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Policies
               </div>
-              {policiesDropdown.map((item) => (
+              {policyPages.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}

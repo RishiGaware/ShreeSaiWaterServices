@@ -20,8 +20,8 @@ import Services from './pages/products/Services';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfUse from './pages/TermsOfUse';
+import PrivacyPolicy from './pages/policies/PrivacyPolicy';
+import TermsOfUse from './pages/policies/TermsOfUse';
 
 function App() {
   return (
@@ -52,8 +52,10 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-use" element={<TermsOfUse />} />
+            
+            {/* Policy Pages */}
+            <Route path="/policies/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/policies/terms-of-use" element={<TermsOfUse />} />
 
             {/* 404 Route */}
             <Route path="*" element={
