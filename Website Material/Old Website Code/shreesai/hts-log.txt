@@ -1,0 +1,141 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 04 Oct 2021 11:43:42 at http://aquaterias.like-themes.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qiC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://aquaterias.like-themes.com/ -O1 "C:\Users\DELL\Desktop\VINOD\shreesai" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:43:44	Warning: 	Note: due to aquaterias.like-themes.com remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/ (see in the options to disable this)
+11:46:10	Error: 	"Forbidden" (403) at link aquaterias.like-themes.com/xmlrpc.php (from aquaterias.like-themes.com/)
+11:47:04	Error: 	"Forbidden" (403) at link aquaterias.like-themes.com/xmlrpc.php?rsd (from aquaterias.like-themes.com/)
+11:53:17	Warning: 	Found for aquaterias.like-themes.com/checkout/
+11:53:17	Warning: 	File has moved from aquaterias.like-themes.com/checkout/ to http://aquaterias.like-themes.com/cart/
+11:58:29	Error: 	"Not Found" (404) at link aquaterias.like-themes.com/404-page (from aquaterias.like-themes.com/)
+11:59:07	Error: 	"Not Found" (404) at link aquaterias.like-themes.com/wp-content/themes/aquaterias/assets/fonts/glyphicons-halflings-regular.eot (from aquaterias.like-themes.com/wp-content/cache/autoptimize/css/autoptimize_8d6bfa676b4b004306924c006cb21bb0.css)
+11:59:07	Error: 	"Not Found" (404) at link aquaterias.like-themes.com/wp-content/themes/images/__hr-content.png (from aquaterias.like-themes.com/wp-content/cache/autoptimize/css/autoptimize_8d6bfa676b4b004306924c006cb21bb0.css)
+11:59:08	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=615
+11:59:08	Warning: 	File has moved from aquaterias.like-themes.com/?p=615 to http://aquaterias.like-themes.com/cart/
+11:59:08	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2462
+11:59:08	Warning: 	File has moved from aquaterias.like-themes.com/?p=2462 to http://aquaterias.like-themes.com/homepage-mineral-water/
+12:00:51	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=3132
+12:00:51	Warning: 	File has moved from aquaterias.like-themes.com/?p=3132 to http://aquaterias.like-themes.com/homepage-natural-water/
+12:00:51	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=3093
+12:00:51	Warning: 	File has moved from aquaterias.like-themes.com/?p=3093 to http://aquaterias.like-themes.com/about-us-aqua/
+12:00:51	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=23
+12:00:51	Warning: 	File has moved from aquaterias.like-themes.com/?p=23 to http://aquaterias.like-themes.com/testimonials/
+12:00:51	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=735
+12:00:51	Warning: 	File has moved from aquaterias.like-themes.com/?p=735 to http://aquaterias.like-themes.com/team/
+12:03:07	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2253
+12:03:07	Warning: 	File has moved from aquaterias.like-themes.com/?p=2253 to http://aquaterias.like-themes.com/faq/
+12:04:29	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=617
+12:04:29	Warning: 	File has moved from aquaterias.like-themes.com/?p=617 to http://aquaterias.like-themes.com/my-account/
+12:04:35	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=31
+12:04:35	Warning: 	File has moved from aquaterias.like-themes.com/?p=31 to http://aquaterias.like-themes.com/blog-one-column/
+12:05:04	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=21
+12:05:04	Warning: 	File has moved from aquaterias.like-themes.com/?p=21 to http://aquaterias.like-themes.com/blog-two-columns/
+12:05:06	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=33
+12:05:06	Warning: 	File has moved from aquaterias.like-themes.com/?p=33 to http://aquaterias.like-themes.com/blog-three-columns/
+12:05:09	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=35
+12:05:09	Warning: 	File has moved from aquaterias.like-themes.com/?p=35 to http://aquaterias.like-themes.com/gallery-2-columns/
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=37
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=37 to http://aquaterias.like-themes.com/gallery-3-columns/
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=39
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=39 to http://aquaterias.like-themes.com/gallery-4-columns/
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=25
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=25 to http://aquaterias.like-themes.com/contacts/
+12:08:15	Error: 	"Not Found" (404) at link aquaterias.like-themes.com/wp-content/uploads/2017/05/contact-bg.png?id=2234 (from aquaterias.like-themes.com/contacts/)
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=595
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=595 to http://aquaterias.like-themes.com/headers/
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=569
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=569 to http://aquaterias.like-themes.com/text/
+12:08:15	Error: 	"Not Found" (404) at link aquaterias.like-themes.com/wp-content/uploads/2017/08/blog6-1024x719.jpg (from aquaterias.like-themes.com/text/)
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=589
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=589 to http://aquaterias.like-themes.com/text_columns/
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=601
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=601 to http://aquaterias.like-themes.com/table/
+12:08:15	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=580
+12:08:15	Warning: 	File has moved from aquaterias.like-themes.com/?p=580 to http://aquaterias.like-themes.com/separators/
+12:08:16	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=546
+12:08:16	Warning: 	File has moved from aquaterias.like-themes.com/?p=546 to http://aquaterias.like-themes.com/buttons/
+12:08:16	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=703
+12:08:16	Warning: 	File has moved from aquaterias.like-themes.com/?p=703 to http://aquaterias.like-themes.com/forms/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=523
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=523 to http://aquaterias.like-themes.com/accordions/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=533
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=533 to http://aquaterias.like-themes.com/alert/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=563
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=563 to http://aquaterias.like-themes.com/tabs/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=29
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=29 to http://aquaterias.like-themes.com/shortcodes/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=673
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=673 to http://aquaterias.like-themes.com/icons-page/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=556
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=556 to http://aquaterias.like-themes.com/list/
+12:08:17	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2195
+12:08:17	Warning: 	File has moved from aquaterias.like-themes.com/?p=2195 to http://aquaterias.like-themes.com/whats-in-your-water/
+12:08:35	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2165
+12:08:35	Warning: 	File has moved from aquaterias.like-themes.com/?p=2165 to http://aquaterias.like-themes.com/why-do-we-need-to-drink-water/
+12:08:36	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2087
+12:08:36	Warning: 	File has moved from aquaterias.like-themes.com/?p=2087 to http://aquaterias.like-themes.com/drinking-water-may-help-to-prevent-and-treat-headaches/
+12:08:37	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2071
+12:08:37	Warning: 	File has moved from aquaterias.like-themes.com/?p=2071 to http://aquaterias.like-themes.com/product/water-set/
+12:08:39	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2068
+12:08:39	Warning: 	File has moved from aquaterias.like-themes.com/?p=2068 to http://aquaterias.like-themes.com/product/lemonmineral/
+12:08:40	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2066
+12:08:40	Warning: 	File has moved from aquaterias.like-themes.com/?p=2066 to http://aquaterias.like-themes.com/product/american-black-coffee/
+12:08:42	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2164
+12:08:42	Warning: 	File has moved from aquaterias.like-themes.com/?p=2164 to http://aquaterias.like-themes.com/product/drop-of-water-mineral/
+12:08:45	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2343
+12:08:45	Warning: 	File has moved from aquaterias.like-themes.com/?p=2343 to http://aquaterias.like-themes.com/team/john-richards/
+12:08:46	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2342
+12:08:46	Warning: 	File has moved from aquaterias.like-themes.com/?p=2342 to http://aquaterias.like-themes.com/team/kelley-miles/
+12:08:46	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2311
+12:08:46	Warning: 	File has moved from aquaterias.like-themes.com/?p=2311 to http://aquaterias.like-themes.com/team/sherman-warner/
+12:08:47	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2310
+12:08:47	Warning: 	File has moved from aquaterias.like-themes.com/?p=2310 to http://aquaterias.like-themes.com/team/denis-green/
+12:08:47	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2309
+12:08:47	Warning: 	File has moved from aquaterias.like-themes.com/?p=2309 to http://aquaterias.like-themes.com/team/antony-taylor/
+12:08:48	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2308
+12:08:48	Warning: 	File has moved from aquaterias.like-themes.com/?p=2308 to http://aquaterias.like-themes.com/team/francis-habbant/
+12:08:48	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2259
+12:08:48	Warning: 	File has moved from aquaterias.like-themes.com/?p=2259 to http://aquaterias.like-themes.com/team/marta-ferrari/
+12:08:48	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2161
+12:08:48	Warning: 	File has moved from aquaterias.like-themes.com/?p=2161 to http://aquaterias.like-themes.com/product/bottled-lemon-water/
+12:08:49	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2163
+12:08:49	Warning: 	File has moved from aquaterias.like-themes.com/?p=2163 to http://aquaterias.like-themes.com/product/bottled-sparkling-water/
+12:08:51	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2159
+12:08:51	Warning: 	File has moved from aquaterias.like-themes.com/?p=2159 to http://aquaterias.like-themes.com/product/bottled-water/
+12:08:52	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2158
+12:08:52	Warning: 	File has moved from aquaterias.like-themes.com/?p=2158 to http://aquaterias.like-themes.com/product/sea-breeze/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2197
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2197 to http://aquaterias.like-themes.com/how-much-water-should-we-drink/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2191
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2191 to http://aquaterias.like-themes.com/fast-facts-on-drinking-water/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2096
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2096 to http://aquaterias.like-themes.com/carbonated-sparkling-water-good-or-bad/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2182
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2182 to http://aquaterias.like-themes.com/how-drinking-more-water-can-help-you-lose-weight/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2188
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2188 to http://aquaterias.like-themes.com/how-many-bathrooms-are-in-your-home/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2186
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2186 to http://aquaterias.like-themes.com/did-you-know-water-covers-71-of-the-earth/
+12:08:55	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2193
+12:08:55	Warning: 	File has moved from aquaterias.like-themes.com/?p=2193 to http://aquaterias.like-themes.com/effects-on-other-organs/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2970
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2970 to http://aquaterias.like-themes.com/gallery/whats-in-your-water/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2358
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2358 to http://aquaterias.like-themes.com/gallery/how-many-bathrooms-are-in-your-home/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2357
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2357 to http://aquaterias.like-themes.com/gallery/how-drinking-more-water-can-help-you-lose-weight/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2356
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2356 to http://aquaterias.like-themes.com/gallery/carbonated-sparkling-water-good-or-bad/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2354
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2354 to http://aquaterias.like-themes.com/gallery/fast-facts-on-drinking-water/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2351
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2351 to http://aquaterias.like-themes.com/gallery/how-much-water-should-we-drink/
+12:08:56	Warning: 	Moved Permanently for aquaterias.like-themes.com/?p=2350
+12:08:56	Warning: 	File has moved from aquaterias.like-themes.com/?p=2350 to http://aquaterias.like-themes.com/gallery/why-do-we-need-to-drink-water/
+
+HTTrack Website Copier/3.49-2 mirror complete in 25 minutes 25 seconds : 587 links scanned, 518 files written (72383742 bytes overall), 519 files updated [58600215 bytes received at 38426 bytes/sec], 17542234 bytes transferred using HTTP compression in 168 files, ratio 15%, 3.3 requests per connection
+(7 errors, 123 warnings, 0 messages)

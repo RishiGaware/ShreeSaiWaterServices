@@ -1,7 +1,100 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getThemeClasses } from '../theme/themeUtils';
+import { COMPANY_INFO } from '../constants/companyInfo';
 
 const Home = () => {
+  const themeClasses = getThemeClasses;
+  const [currentCustomerIndex, setCurrentCustomerIndex] = useState(0);
+
+  // Customer logos array
+  const customerLogos = [
+    'image_2025-08-27_170840604.png',
+    'image_2025-08-27_171021271.png',
+    'image_2025-08-27_171140936.png',
+    'image_2025-08-27_171621589.png',
+    'image_2025-08-27_172221098.png',
+    'image_2025-08-27_173207648.png',
+    'image_2025-08-27_183347426.png',
+    'image_2025-08-27_183529996.png',
+    'image_2025-08-27_183930911.png',
+    'image_2025-08-27_184316302.png',
+    'image_2025-08-27_184559448.png',
+    'image_2025-08-27_184716422.png',
+    'image_2025-08-27_191341712.png',
+    'image_2025-08-27_191645199.png',
+    'image_2025-08-27_191848170.png',
+    'image_2025-08-27_192359268.png',
+    'image_2025-08-27_192753885.png',
+    'image_2025-08-27_193528239.png',
+    'image_2025-08-27_194044546.png',
+    'image_2025-08-27_194417877.png',
+    'image_2025-08-27_194941343.png',
+    'image_2025-08-27_200823655.png',
+    'image_2025-08-27_201404538.png',
+    'image_2025-08-27_202001779.png',
+    'image_2025-08-27_202434312.png',
+    'image_2025-08-27_202801212.png',
+    'image_2025-08-27_203015112.png',
+    'image_2025-08-27_203514315.png',
+    'image_2025-08-27_204632454.png',
+    'image_2025-08-27_204848789.png',
+    'image_2025-08-27_205015867.png',
+    'image_2025-08-27_210252114.png',
+    'image_2025-08-27_210700710.png',
+    'Sangam Steel.jpg',
+    'smw_ispat_pvt_ltd.jpg'
+  ];
+
+  // Product plants data
+  const productPlants = [
+    {
+      name: 'Water Treatment Plant',
+      description: 'Industrial Reverse Osmosis Systems for high-purity water production',
+      image: '/products/Reverse Osmosis Plant .png',
+      path: '/products/water-treatment',
+      icon: '⚗️'
+    },
+    {
+      name: 'Filtration Plant',
+      description: 'Media, cartridge & membrane filtration technologies',
+      image: '/products/Filteration Plant.png',
+      path: '/products/filtration-plant',
+      icon: '🏭'
+    },
+    {
+      name: 'Softener Plant',
+      description: 'Ion exchange technology for water softening',
+      image: '/products/Softner Plant.png',
+      path: '/products/softener-plant',
+      icon: '💧'
+    },
+    {
+      name: 'Ultra Filtration Plant',
+      description: 'Advanced ultrafiltration with microprocessor control',
+      image: '/products/Ultra Filtration Plant.png',
+      path: '/products/ultra-filtration-plant',
+      icon: '🔬'
+    },
+    {
+      name: 'DM Plant',
+      description: 'Demineralization and deionization systems',
+      image: '/products/De minoralization Plant.png',
+      path: '/products/dm-plant',
+      icon: '🧪'
+    }
+  ];
+
+  // Auto-rotate customer logos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCustomerIndex((prevIndex) => 
+        (prevIndex + 1) % customerLogos.length
+      );
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [customerLogos.length]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -83,12 +176,6 @@ const Home = () => {
                 </svg>
                 <span className="text-sm sm:text-base font-medium">20+ Years Experience</span>
               </div>
-              {/* <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-sm sm:text-base font-medium">24/7 Support</span>
-              </div> */}
             </div>
           </div>
         </div>
@@ -101,40 +188,144 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Our Products Section */}
+      <section className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+              Our Product Plants
+            </h2>
+            <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+              Comprehensive water treatment solutions for all your industrial needs
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {productPlants.map((plant, index) => (
+              <Link
+                key={index}
+                to={plant.path}
+                className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group transform hover:scale-105`}
+              >
+                <div className="text-center">
+                  <div className="mb-4">
+                    <img 
+                      src={plant.image} 
+                      alt={plant.name}
+                      className="mx-auto max-w-full h-48 object-contain rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                    />
+                  </div>
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {plant.icon}
+                  </div>
+                  <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-3 group-hover:text-blue-600 transition-colors duration-300`}>
+                    {plant.name}
+                </h3>
+                  <p className={`${themeClasses.text.secondary} leading-relaxed mb-4`}>
+                    {plant.description}
+                  </p>
+                  <div className="flex items-center justify-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors duration-300">
+                    Learn More
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+                </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Logos Slideshow */}
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-700">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+              Our Trusted Customers
+            </h2>
+            <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+              We are proud to serve leading companies across various industries
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+                </div>
+
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-1000 ease-in-out"
+                style={{ transform: `translateX(-${currentCustomerIndex * 100}%)` }}
+              >
+                {customerLogos.map((logo, index) => (
+                  <div key={index} className="w-full flex-shrink-0 flex justify-center items-center">
+                    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <img 
+                        src={`/Customer /${logo}`}
+                        alt={`Customer ${index + 1}`}
+                        className="max-h-20 max-w-48 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                </div>
+              </div>
+            ))}
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {customerLogos.slice(0, Math.ceil(customerLogos.length / 3)).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentCustomerIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentCustomerIndex === index 
+                      ? 'bg-blue-600 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Company Overview */}
-      <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className={`py-16 sm:py-20 ${themeClasses.background.primary}`}>
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
             <div className="animate-fade-in-left">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6 leading-tight tracking-tight">
+              <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold ${themeClasses.text.primary} mb-3 sm:mb-4 md:mb-6 leading-tight tracking-tight`}>
                 Your Trusted Water Treatment Partner
-            </h2>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed font-normal">
-                With 20 years of expertise, Shree Sai Water Services has established itself as a trusted name known for innovation and reliability in water purification technologies.
+              </h2>
+              <p className={`text-sm sm:text-base ${themeClasses.text.secondary} mb-3 sm:mb-4 leading-relaxed font-normal`}>
+                With 20+ years of expertise, {COMPANY_INFO.name} has established itself as a trusted name known for innovation and reliability in water purification technologies.
               </p>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed font-normal">
+              <p className={`text-sm sm:text-base ${themeClasses.text.secondary} mb-4 sm:mb-6 leading-relaxed font-normal`}>
                 We are supported by excellent dedicated service persons, well qualified, trained, and experienced in this field. Our commitment to excellence and customer satisfaction drives us to continuously innovate and provide effective water treatment solutions tailored to the unique requirements of each client.
               </p>
-              <Link to="/company/about-us" className="btn-primary text-sm px-4 sm:px-6 py-2 sm:py-3 transform hover:scale-105 transition-all duration-300 hover:shadow-xl inline-block font-semibold tracking-wide">
+              <Link to="/company/about-us" className={`${themeClasses.button.primary} text-sm px-4 sm:px-6 py-2 sm:py-3 transform hover:scale-105 transition-all duration-300 hover:shadow-xl inline-block font-semibold tracking-wide`}>
                 Learn More About Us
-                </Link>
-              </div>
-            <div className="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 p-4 sm:p-6 rounded-xl animate-fade-in-right hover:shadow-xl transition-shadow duration-300 border border-blue-200/50 dark:border-gray-600/50">
-              <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 leading-tight tracking-tight">Why Choose Us?</h3>
+              </Link>
+            </div>
+            <div className={`${themeClasses.card} p-4 sm:p-6 animate-fade-in-right hover:shadow-xl transition-shadow duration-300`}>
+              <h3 className={`text-base sm:text-lg md:text-xl font-bold ${themeClasses.text.primary} mb-3 sm:mb-4 leading-tight tracking-tight`}>Why Choose Us?</h3>
               <ul className="space-y-2">
-                <li className="flex items-center text-gray-700 dark:text-gray-300 text-sm font-medium">
+                <li className={`flex items-center ${themeClasses.text.secondary} text-sm font-medium`}>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span>
                   20+ Years of Industry Experience
                 </li>
-                <li className="flex items-center text-gray-700 dark:text-gray-300 text-sm font-medium">
+                <li className={`flex items-center ${themeClasses.text.secondary} text-sm font-medium`}>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span>
                   Qualified & Trained Service Personnel
                 </li>
-                <li className="flex items-center text-gray-700 dark:text-gray-300 text-sm font-medium">
+                <li className={`flex items-center ${themeClasses.text.secondary} text-sm font-medium`}>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span>
                   Never Compromise on Quality
                 </li>
-                <li className="flex items-center text-gray-700 dark:text-gray-300 text-sm font-medium">
+                <li className={`flex items-center ${themeClasses.text.secondary} text-sm font-medium`}>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span>
                   Sustainable & Environmentally Responsible
                 </li>
@@ -144,170 +335,32 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      {/* CTA Section */}
+      <section className={`py-16 sm:py-20 ${themeClasses.background.gradient}`}>
         <div className="container-custom">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fade-in-up">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6 leading-tight tracking-tight">
-              Our Comprehensive Solutions
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed font-normal">
-              We deal in complete water treatment systems designed to meet the diverse needs of residential, commercial, and industrial clients.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-100 border border-blue-100 dark:border-gray-700">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              </div>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">Sand Filtration Plant</h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed font-normal">
-                High-efficiency sand filtration systems for removing suspended solids and impurities from water.
-              </p>
-              <Link to="/products/water-treatment" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-xs sm:text-sm transition-colors duration-200 inline-flex items-center group">
-                Learn More 
-                <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-200 border border-purple-100 dark:border-gray-700">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">Softener Plant</h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed font-normal">
-                Advanced water softening systems to remove hardness and improve water quality for industrial applications.
-              </p>
-              <Link to="/products/water-treatment" className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 font-semibold text-xs sm:text-sm transition-colors duration-200 inline-flex items-center group">
-                Learn More 
-                <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-300 border border-green-100 dark:border-gray-700">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">Reverse Osmosis (RO)</h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed font-normal">
-                State-of-the-art RO systems for producing high-purity water through advanced membrane technology.
-              </p>
-              <Link to="/products/water-treatment" className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 font-semibold text-xs sm:text-sm transition-colors duration-200 inline-flex items-center group">
-                Learn More 
-                <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-400 border border-red-100 dark:border-gray-700">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900 dark:to-red-800 rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              </div>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">DM Water Plant</h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed font-normal">
-                De-mineralization plants for producing ultra-pure water by removing all dissolved minerals and salts.
-              </p>
-              <Link to="/products/water-treatment" className="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 font-semibold text-xs sm:text-sm transition-colors duration-200 inline-flex items-center group">
-                Learn More 
-                <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-500 border border-yellow-100 dark:border-gray-700">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800 rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-                </div>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">Ultra Filtration Plant</h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed font-normal">
-                Advanced ultra-filtration systems for removing bacteria, viruses, and other microorganisms from water.
-              </p>
-              <Link to="/products/water-treatment" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-800 dark:hover:text-yellow-300 font-semibold text-xs sm:text-sm transition-colors duration-200 inline-flex items-center group">
-                Learn More 
-                <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-                </div>
-
-            <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-600 border border-indigo-100 dark:border-gray-700">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-indigo-900 dark:to-indigo-800 rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              </div>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">Chemical Spares</h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed font-normal">
-                Complete range of chemical spares and consumables for water treatment plant maintenance and operation.
-              </p>
-              <Link to="/products/services" className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-semibold text-xs sm:text-sm transition-colors duration-200 inline-flex items-center group">
-                Learn More 
-                <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="section-padding bg-gradient-to-r from-blue-600 to-purple-700 dark:from-blue-800 dark:to-purple-900">
-        <div className="container-custom text-center">
-          <div className="max-w-4xl mx-auto animate-fade-in-up">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight tracking-tight">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-100 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed font-normal">
-              Contact us today for a free consultation and discover how our water treatment solutions can benefit your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center">
-              <Link to="/contact" className="btn-secondary text-xs px-3 sm:px-4 py-1.5 sm:py-2 transform hover:scale-105 transition-all duration-300 hover:shadow-lg inline-block font-medium tracking-wide">
-                Get Free Consultation
+            <p className="text-lg text-blue-100 mb-8 leading-relaxed">
+              Contact us today to discuss your water treatment requirements and get a customized solution that meets your specific needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center justify-center"
+              >
+                Contact Our Experts
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
             </Link>
-              <Link to="/products/water-treatment" className="btn-outline text-xs px-3 sm:px-4 py-1.5 sm:py-2 transform hover:scale-105 transition-all duration-300 hover:shadow-lg inline-block font-medium tracking-wide">
-                Our Solutions
+              <Link
+                to="/products"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-blue-600 inline-flex items-center justify-center"
+              >
+                View All Products
             </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dark Mode Test Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-100 via-blue-50 to-purple-50 dark:from-gray-800 dark:via-blue-900/20 dark:to-purple-900/20">
-        <div className="container-custom">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-6 sm:mb-8 text-gray-900 dark:text-white animate-fade-in-up leading-tight tracking-tight">
-            Dark Mode Test Section
-          </h2>
-          <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
-            <div className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-100 border border-blue-100 dark:border-blue-800">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900 dark:text-white leading-tight tracking-tight">Light Card</h3>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal">This card should change appearance in dark mode.</p>
-            </div>
-            <div className="bg-blue-50 dark:bg-blue-900 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-200 border border-blue-200 dark:border-blue-700">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-blue-900 dark:text-blue-100 leading-tight tracking-tight">Blue Card</h3>
-              <p className="text-sm sm:text-base md:text-lg text-blue-700 dark:text-blue-200 leading-relaxed font-normal">This card should also adapt to dark mode.</p>
-            </div>
-            <div className="bg-purple-50 dark:bg-purple-900 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-300 border border-purple-200 dark:border-purple-700">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-purple-900 dark:text-purple-100 leading-tight tracking-tight">Purple Card</h3>
-              <p className="text-sm sm:text-base md:text-lg text-purple-700 dark:text-purple-200 leading-relaxed font-normal">This card should also adapt to dark mode.</p>
             </div>
           </div>
         </div>

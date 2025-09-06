@@ -271,7 +271,7 @@ const Navbar = () => {
                   className={`block px-8 py-2 text-sm transition-colors duration-200 ${
                     isActive(item.path)
                       ? 'text-blue-700 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
+                      : 'text-White-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                   onClick={handleMobileNavigation}
                 >
@@ -292,7 +292,7 @@ const Navbar = () => {
                   className={`block px-8 py-2 text-sm transition-colors duration-200 ${
                     isActive(item.path)
                       ? 'text-blue-700 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
+                      : 'text-White-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                   onClick={handleMobileNavigation}
                 >

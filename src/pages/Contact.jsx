@@ -25,14 +25,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-400/5 to-purple-400/5"></div>
         </div>
 
-        <div className="container-custom relative z-10 py-16 sm:py-20 md:py-24">
+        <div className="container-custom relative z-10 py-16 sm:py-20 md:py-24 p-5">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
               Get in <span className="text-gradient-primary">Touch</span>

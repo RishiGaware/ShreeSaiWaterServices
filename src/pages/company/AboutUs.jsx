@@ -1,150 +1,353 @@
 import React from 'react';
-import PageTemplate from '../../components/PageTemplate';
+import { getThemeClasses } from '../../theme/themeUtils';
+import { COMPANY_INFO } from '../../constants/companyInfo';
 
 const AboutUs = () => {
+  const themeClasses = getThemeClasses;
+
+  const services = [
+    {
+      name: 'Sand Filtration Plant',
+      description: 'High-efficiency sand filtration systems for removing suspended matters and turbidity.',
+      icon: '🏭'
+    },
+    {
+      name: 'Softener Plant',
+      description: 'Advanced water softening systems using ion exchange technology to remove calcium and magnesium.',
+      icon: '💧'
+    },
+    {
+      name: 'Ultra Filtration Plant',
+      description: 'Advanced ultra-filtration systems for removing bacteria, viruses, and microorganisms.',
+      icon: '🔬'
+    },
+    {
+      name: 'Reverse Osmosis (RO)',
+      description: 'State-of-the-art RO systems for producing high-purity water through membrane technology.',
+      icon: '⚗️'
+    },
+    {
+      name: 'DM Water Plant',
+      description: 'De-mineralization plants for producing ultra-pure water by removing dissolved minerals.',
+      icon: '🧪'
+    },
+    {
+      name: 'Chemical Spares',
+      description: 'Complete range of chemical spares and consumables for plant maintenance.',
+      icon: '⚙️'
+    }
+  ];
+
+  const industries = [
+    'Automobile', 'Construction', 'Mining', 'Steel & Iron', 'Electroplating',
+    'Food & Beverages', 'Sugar Mill', 'Petroleum Industry', 'Pulp and Paper',
+    'Chemical & Pharmaceutical', 'Laboratory', 'Hospitals & Clinics',
+    'Schools, Universities and Offices', 'Hotels, Spa, Theme Parks and Resorts',
+    'Plastic Extrusions & Moldings', 'Printing Ink Manufacturing', 'Paint Production'
+  ];
+
   return (
-    <PageTemplate
-      title="About Shree Sai Water Services"
-      description="Leading provider in water filtration industry with 20+ years of expertise in delivering high-quality solutions for clean and safe industrial water."
-    >
-      <div className="max-w-4xl mx-auto">
-        {/* Company Introduction */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Introduction</h2>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              We are Shree Sai Water Services, a leading provider in the water filtration industry dedicated to delivering high-quality solutions for clean and safe industrial water. We deal with supplies and servicing of water treatment plants like all types of filters, softener plants, De-mineralization (DM) plants, and Reverse Osmosis (RO) systems.
-            </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              We are supported by excellent dedicated service persons, well qualified, trained, and experienced in this field. Our commitment to excellence and customer satisfaction drives us to continuously innovate and provide effective water treatment solutions tailored to the unique requirements of each client.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>We have never compromised on the quality and the services provided to the customer.</strong>
+    <div className={`min-h-screen ${themeClasses.background.primary} ${themeClasses.text.primary}`}>
+      {/* Hero Section */}
+      <div className={`${themeClasses.background.gradient} py-16 sm:py-20 lg:py-24`}>
+        <div className="container-custom">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              About {COMPANY_INFO.name}
+            </h1>
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              Leading provider in water filtration industry with 20+ years of expertise in delivering high-quality solutions for clean and safe industrial water
             </p>
           </div>
-        </section>
-
-        {/* Experience & Expertise */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Experience & Expertise</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">20+ Years of Excellence</h3>
-              <p className="text-gray-700 mb-4">
-                With 20 years of expertise, Shree Sai Water Services has established itself as a trusted name known for innovation and reliability in water purification technologies.
-              </p>
-              <div className="text-4xl font-bold text-blue-600">20+</div>
-              <div className="text-gray-600">Years in Business</div>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Team</h3>
-              <p className="text-gray-700 mb-4">
-                Our team consists of well-qualified, trained, and experienced professionals who are dedicated to providing the best water treatment solutions.
-              </p>
-              <div className="text-4xl font-bold text-green-600">100%</div>
-              <div className="text-gray-600">Qualified Personnel</div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Services */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">What We Deal In</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Sand Filtration Plant</h3>
-              <p className="text-gray-600">High-efficiency sand filtration systems for removing suspended solids and impurities.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Softener Plant</h3>
-              <p className="text-gray-600">Advanced water softening systems to remove hardness and improve water quality.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Ultra Filtration Plant</h3>
-              <p className="text-gray-600">Advanced ultra-filtration systems for removing bacteria and microorganisms.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Reverse Osmosis (RO)</h3>
-              <p className="text-gray-600">State-of-the-art RO systems for producing high-purity water through membrane technology.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-yellow-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">DM Water Plant</h3>
-              <p className="text-gray-600">De-mineralization plants for producing ultra-pure water by removing dissolved minerals.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Chemical Spares</h3>
-              <p className="text-gray-600">Complete range of chemical spares and consumables for plant maintenance.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Technology & Innovation */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Technology & Innovation</h2>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Our comprehensive range of products includes state-of-the-art filtration systems designed to meet the diverse needs of residential, commercial, and industrial clients. We offer a wide range of products and services, and we are confident in our ability to solve any challenges.
-            </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Water purification is a step-by-step process often requiring a combination of technologies. We, Shree Sai Water Services, provide you with the best water treatment systems by blending these technologies to suit your needs.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              At Shree Sai Water Services, we prioritize sustainability and environmental responsibility, ensuring our systems not only meet regulatory standards but also contribute to a healthier planet.
-            </p>
-          </div>
-        </section>
-
-        {/* Commitment */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Commitment</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center bg-white p-6 rounded-xl shadow-md">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Quality</h3>
-              <p className="text-gray-600">Never compromise on the quality of our products and services.</p>
-            </div>
-            <div className="text-center bg-white p-6 rounded-xl shadow-md">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
-              <p className="text-gray-600">Continuously innovate and provide effective water treatment solutions.</p>
-            </div>
-            <div className="text-center bg-white p-6 rounded-xl shadow-md">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Customer Satisfaction</h3>
-              <p className="text-gray-600">Tailored solutions for the unique requirements of each client.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="text-center bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
-          <p className="text-xl mb-6">
-            We would welcome the opportunity to discuss how Shree Sai Water Services can contribute to your company's success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Contact Us Today
-            </a>
-            <a href="tel:+919850813593" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Call: +91 9850813593
-            </a>
         </div>
-        </section>
       </div>
-    </PageTemplate>
+
+      {/* Company Profile */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className={`text-2xl sm:text-3xl font-bold ${themeClasses.text.primary} mb-6`}>
+                  Company Overview
+                </h2>
+                <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed mb-6`}>
+                  {COMPANY_INFO.name} has been involved since 2004 in offering a wide spectrum of high quality industrial RO Plants, De-mineralization Plants, Water Softener Solutions for extensive range of applications commercial RO Plants. RO systems for bore well, ground, well river and tap water applications.
+                </p>
+                <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed mb-6`}>
+                  Our highly customized plants are available in various capacity of potable water production from 500 LPH to 50000 LPH. In the short span of time we have gained international acclaim for our varied range of products.
+                </p>
+                <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed`}>
+                  We are undertaking annual maintenance contract, on time service operation and maintenance contract of any company make. Water purification is a step by step process often requiring a combination of technologies. {COMPANY_INFO.shortName} provide you the best water treatment systems by blending these technologies to suit your need.
+                </p>
+              </div>
+              
+              <div className={`${themeClasses.card} p-8`}>
+                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Company Details</h3>
+                <div className="space-y-3">
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Established:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>2004</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Registered:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>2016</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Experience:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>20+ years</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>GSTIN:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.business.gstin}</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>PAN:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.business.pan}</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Contact Person:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.contactPerson}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Vision, Mission, Values */}
+      <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Our Vision, Mission & Values
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                The core principles that drive {COMPANY_INFO.shortName} towards a sustainable future.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔮</div>
+                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Vision</h3>
+                <p className={`${themeClasses.text.secondary} leading-relaxed`}>
+                  {COMPANY_INFO.vision}
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Mission</h3>
+                <p className={`${themeClasses.text.secondary} leading-relaxed`}>
+                  {COMPANY_INFO.mission}
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💎</div>
+                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Values</h3>
+                <p className={`${themeClasses.text.secondary} leading-relaxed`}>
+                  {COMPANY_INFO.values}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Government Recognition */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Government Recognition
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Recognition from the Government of India for our contribution to the nation.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className={`${themeClasses.card} p-8 text-center`}>
+              <div className="text-6xl mb-6">🏆</div>
+              <h3 className={`text-2xl font-bold ${themeClasses.text.primary} mb-4`}>
+                {COMPANY_INFO.recognition.ministry}
+              </h3>
+              <h4 className={`text-xl font-semibold ${themeClasses.text.primary} mb-4`}>
+                {COMPANY_INFO.recognition.department}
+              </h4>
+              <div className={`text-lg ${themeClasses.text.accent} mb-4`}>
+                {COMPANY_INFO.recognition.category}
+              </div>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-4xl mx-auto`}>
+                {COMPANY_INFO.recognition.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services */}
+      <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Our Services
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Comprehensive water treatment solutions for all your needs.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                  <div className="text-center">
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </div>
+                    <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-3`}>
+                      {service.name}
+                    </h3>
+                    <p className={`text-sm ${themeClasses.text.secondary} leading-relaxed`}>
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Industries We Serve */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Industries We Serve
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Our water treatment solutions serve a wide range of industries across India.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {industries.map((industry, index) => (
+                <div key={index} className={`${themeClasses.card} p-4 text-center hover:shadow-lg transition-all duration-300 group`}>
+                  <span className={`text-sm font-medium ${themeClasses.text.primary} group-hover:text-blue-600 transition-colors duration-300`}>
+                    {industry}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Information */}
+      <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Contact Information
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Get in touch with us for all your water treatment needs.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className={`${themeClasses.card} p-8`}>
+                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>
+                  Head Office
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Address:</span>
+                    <p className={`${themeClasses.text.secondary} mt-1`}>
+                      {COMPANY_INFO.contact.address}
+                    </p>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Alternative Address:</span>
+                    <p className={`${themeClasses.text.secondary} mt-1`}>
+                      {COMPANY_INFO.contact.addressSecondary}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={`${themeClasses.card} p-8`}>
+                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>
+                  Contact Details
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Phone:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.phone}</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Email:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.email}</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Website:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.website}</span>
+                  </div>
+                  <div>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}>Contact Person:</span>
+                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.contactPerson}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className={`text-2xl sm:text-3xl font-bold ${themeClasses.text.primary} mb-6`}>
+              Ready to Partner with Us?
+            </h2>
+            <p className={`text-lg ${themeClasses.text.secondary} mb-8 leading-relaxed`}>
+              Contact us today to discuss your water treatment requirements and get a customized solution that meets your specific needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className={`${themeClasses.button.primary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
+              >
+                Contact Us
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="/products"
+                className={`${themeClasses.button.secondary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
+              >
+                View Our Products
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

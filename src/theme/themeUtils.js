@@ -29,6 +29,7 @@ export const getThemeClasses = {
     card: 'bg-white dark:bg-gray-800',
     navbar: 'bg-white dark:bg-gray-900',
     footer: 'bg-gray-900 dark:bg-black',
+    gradient: 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-blue-900 dark:via-blue-800 dark:to-blue-900',
   },
   
   // Text classes
@@ -39,6 +40,7 @@ export const getThemeClasses = {
     muted: 'text-gray-400 dark:text-gray-500',
     inverse: 'text-white dark:text-gray-900',
     brand: 'text-blue-600 dark:text-blue-400',
+    accent: 'text-blue-600 dark:text-blue-400',
   },
   
   // Border classes

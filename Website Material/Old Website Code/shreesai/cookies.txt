@@ -1,0 +1,16 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiment_mu3j-0RiRnaEjeh0_ldH4w	1
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiment_hkSTzGjnSi-nREa0nfbgjw	0
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiment_taxcU2U8QNWg3M5ucq5XTg	6
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiment_-v8MBhS0QsGRHCl7AQL7Eg	5
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiment_TvPPm25WRqO8mCbR18jDkw	1
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiment_8XQ-Grx2RpW40J5yERdgKA	5
+.themeforest.net	TRUE	/	FALSE	1999999999	market_experiments	-v8MBhS0QsGRHCl7AQL7Eg.5*8XQ-Grx2RpW40J5yERdgKA.5*TvPPm25WRqO8mCbR18jDkw.1*hkSTzGjnSi-nREa0nfbgjw.0*mu3j-0RiRnaEjeh0_ldH4w.1*taxcU2U8QNWg3M5ucq5XTg.6
+preview.themeforest.net	TRUE	/	FALSE	1999999999	SameSite	Lax
+aquaterias.like-themes.com	TRUE	/	FALSE	1999999999	PHPSESSID	8vftiusqcfab903k8g81hp2g27
+aquaterias.like-themes.com	TRUE	/	FALSE	1999999999	pvc_visits[0]	1633414574b2195a1633414578b2165a1633414581b2087a1633415090b2191a1633415093b2096a1633415101b2182a1633415104b2188a1633415109b2193a1633415682b2197a1633415694b2186
+aquaterias.like-themes.com	TRUE	/	FALSE	1999999999	woocommerce_items_in_cart	1
+aquaterias.like-themes.com	TRUE	/	FALSE	1999999999	woocommerce_cart_hash	8c8f32299bc5a1af1d50c25d0aa023a2
+aquaterias.like-themes.com	TRUE	/	FALSE	1999999999	wp_woocommerce_session_e3cbdcfbabae7f18d2bbaa04cfeaf812	4d406e60dd81b4b61b0b635203ce6024%7C%7C1633501118%7C%7C1633497518%7C%7C0c536554ead6ec7a917f479f0f25b178
+

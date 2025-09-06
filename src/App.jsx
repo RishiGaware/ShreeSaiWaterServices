@@ -13,10 +13,15 @@ import Careers from './pages/company/Careers';
 import Vendor from './pages/company/Vendor';
 import Certificates from './pages/company/Certificates';
 import CorporateSocialResponsibility from './pages/company/CorporateSocialResponsibility';
+import VisionMission from './pages/company/VisionMission';
 import WaterTreatment from './pages/products/WaterTreatment';
 import WasteWaterTreatment from './pages/products/WasteWaterTreatment';
 import Manufacturing from './pages/products/Manufacturing';
 import Services from './pages/products/Services';
+import FiltrationPlant from './pages/products/FiltrationPlant';
+import SoftenerPlant from './pages/products/SoftenerPlant';
+import UltraFiltrationPlant from './pages/products/UltraFiltrationPlant';
+import DMPlant from './pages/products/DMPlant';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
@@ -41,12 +46,17 @@ function App() {
             <Route path="/company/vendor" element={<Vendor />} />
             <Route path="/company/certificates" element={<Certificates />} />
             <Route path="/company/corporate-social-responsibility" element={<CorporateSocialResponsibility />} />
+            <Route path="/company/vision-mission" element={<VisionMission />} />
 
             {/* Product Section */}
             <Route path="/products/water-treatment" element={<WaterTreatment />} />
             <Route path="/products/waste-water-treatment" element={<WasteWaterTreatment />} />
             <Route path="/products/manufacturing" element={<Manufacturing />} />
             <Route path="/products/services" element={<Services />} />
+            <Route path="/products/filtration-plant" element={<FiltrationPlant />} />
+            <Route path="/products/softener-plant" element={<SoftenerPlant />} />
+            <Route path="/products/ultra-filtration-plant" element={<UltraFiltrationPlant />} />
+            <Route path="/products/dm-plant" element={<DMPlant />} />
 
             {/* Other Pages */}
             <Route path="/gallery" element={<Gallery />} />

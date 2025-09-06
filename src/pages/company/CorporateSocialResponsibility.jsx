@@ -1,124 +1,176 @@
 import React from 'react';
-import PageTemplate from '../../components/PageTemplate';
 import { getThemeClasses } from '../../theme/themeUtils';
+import { COMPANY_INFO } from '../../constants/companyInfo';
 
 const CorporateSocialResponsibility = () => {
-  const initiatives = [
+  const themeClasses = getThemeClasses;
+
+  const csrInitiatives = [
     {
       id: 1,
-      title: 'Clean Water Access',
-      description: 'Providing clean drinking water to underserved communities through our technology and expertise.',
-      impact: '10,000+ people provided with clean water',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
-      category: 'Community Development'
+      title: 'Commitment to the Environment',
+      description: 'We design and implement systems that promote efficient water usage, energy savings, and eco-friendly technologies. By reducing wastewater and recycling resources, we help industries and communities minimize their environmental footprint.',
+      icon: '🌱',
+      features: [
+        'Efficient water usage systems',
+        'Energy-saving technologies',
+        'Eco-friendly solutions',
+        'Wastewater reduction',
+        'Resource recycling programs'
+      ]
     },
     {
       id: 2,
-      title: 'Environmental Education',
-      description: 'Conducting workshops and training programs to raise awareness about water conservation.',
-      impact: '5,000+ students educated annually',
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop',
-      category: 'Education'
+      title: 'Access to Clean Water',
+      description: 'Water is a basic human right. Through our expertise in RO, UF, and wastewater treatment systems, we contribute to projects that bring safe drinking water to communities, schools, and institutions—improving health and well-being.',
+      icon: '💧',
+      features: [
+        'Safe drinking water projects',
+        'Community water systems',
+        'School water programs',
+        'Institutional water solutions',
+        'Health and well-being focus'
+      ]
     },
     {
       id: 3,
-      title: 'Green Technology Research',
-      description: 'Investing in research and development of eco-friendly water treatment solutions.',
-      impact: '15+ patents filed for green technologies',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop',
-      category: 'Innovation'
+      title: 'Community Engagement',
+      description: 'We actively support initiatives aimed at raising awareness about water conservation, hygiene, and sustainability. Our team participates in local programs to educate communities on how small actions can make a big impact on water security.',
+      icon: '🤝',
+      features: [
+        'Water conservation awareness',
+        'Hygiene education programs',
+        'Sustainability workshops',
+        'Local community participation',
+        'Educational initiatives'
+      ]
     },
     {
       id: 4,
-      title: 'Employee Volunteer Program',
-      description: 'Encouraging our team to contribute to community service and environmental projects.',
-      impact: '2,000+ volunteer hours annually',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop',
-      category: 'Employee Engagement'
+      title: 'Ethical Business Practices',
+      description: 'Integrity and transparency are the foundations of our business. We are committed to fair practices in dealing with customers, vendors, and employees, ensuring long-term relationships built on trust.',
+      icon: '⚖️',
+      features: [
+        'Integrity and transparency',
+        'Fair customer practices',
+        'Ethical vendor relationships',
+        'Employee fairness',
+        'Trust-based partnerships'
+      ]
     },
     {
       id: 5,
-      title: 'Sustainable Supply Chain',
-      description: 'Working with suppliers who share our commitment to environmental responsibility.',
-      impact: '90% of suppliers certified sustainable',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
-      category: 'Supply Chain'
-    },
-    {
-      id: 6,
-      title: 'Carbon Footprint Reduction',
-      description: 'Implementing measures to reduce our carbon footprint and environmental impact.',
-      impact: '25% reduction in carbon emissions',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
-      category: 'Environmental Impact'
+      title: 'Employee Well-being',
+      description: 'We value our people as our greatest strength. By fostering a safe, inclusive, and growth-oriented workplace, we ensure our employees are empowered to contribute both to the company\'s success and to society at large.',
+      icon: '👥',
+      features: [
+        'Safe workplace environment',
+        'Inclusive culture',
+        'Growth opportunities',
+        'Employee empowerment',
+        'Society contribution focus'
+      ]
     }
   ];
 
-  const stats = [
+  const impactStats = [
     { label: 'Communities Served', value: '150+', icon: '🏘️' },
     { label: 'Clean Water Projects', value: '75+', icon: '💧' },
-    { label: 'Volunteer Hours', value: '10,000+', icon: '🤝' },
-    { label: 'Students Educated', value: '25,000+', icon: '📚' },
-    { label: 'Green Technologies', value: '20+', icon: '🌱' },
-    { label: 'Carbon Reduction', value: '25%', icon: '🌍' }
+    { label: 'Educational Programs', value: '50+', icon: '📚' },
+    { label: 'Environmental Initiatives', value: '30+', icon: '🌱' },
+    { label: 'Employee Volunteer Hours', value: '5,000+', icon: '🤝' },
+    { label: 'Sustainable Solutions', value: '100+', icon: '♻️' }
   ];
 
   return (
-    <PageTemplate
-      title="Corporate Social Responsibility"
-      description="Making a positive impact on society and the environment through sustainable business practices and community engagement."
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className={`${getThemeClasses.hero} rounded-2xl mb-16`}>
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Corporate Social Responsibility
+    <div className={`min-h-screen ${themeClasses.background.primary} ${themeClasses.text.primary}`}>
+      {/* Hero Section */}
+      <div className={`${themeClasses.background.gradient} py-16 sm:py-20 lg:py-24`}>
+        <div className="container-custom">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${themeClasses.text.primary} mb-6`}>
+              Corporate & Social Responsibility
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Committed to creating positive change through sustainable practices and community engagement
+            <p className={`text-lg sm:text-xl ${themeClasses.text.secondary} max-w-3xl mx-auto leading-relaxed`}>
+              At {COMPANY_INFO.shortName}, we believe that business growth and social responsibility go hand in hand. As a provider of water treatment solutions, we recognize the vital role we play in preserving natural resources and ensuring access to clean water for future generations.
             </p>
           </div>
         </div>
+      </div>
 
-        {/* Mission Statement */}
-        <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.light}`}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className={`text-3xl font-bold mb-6 ${getThemeClasses.text.primary}`}>
-              Our CSR Mission
-            </h2>
-            <p className={`text-lg ${getThemeClasses.text.secondary} mb-8`}>
-              At SSWS, we believe that business success and social responsibility go hand in hand. 
-              Our CSR initiatives focus on environmental sustainability, community development, and 
-              creating lasting positive impact through our water treatment expertise.
-            </p>
-            <div className={`${getThemeClasses.card} p-8`}>
-              <div className="text-6xl mb-4">🌊</div>
-              <h3 className={`text-2xl font-bold mb-4 ${getThemeClasses.text.primary}`}>
-                "Clean Water for All"
-              </h3>
-              <p className={`text-lg ${getThemeClasses.text.secondary}`}>
-                We're committed to ensuring access to clean water for communities worldwide, 
-                while protecting our planet for future generations.
-              </p>
+      {/* CSR Initiatives */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Our CSR Commitments
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {csrInitiatives.map((initiative, index) => (
+                <div key={initiative.id} className={`${themeClasses.card} p-8 hover:shadow-xl transition-all duration-300 group`}>
+                  <div className="flex items-start mb-6">
+                    <div className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                      {initiative.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-3`}>
+                        {initiative.id}. {initiative.title}
+                      </h3>
+                      <p className={`${themeClasses.text.secondary} leading-relaxed mb-4`}>
+                        {initiative.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className={`font-semibold ${themeClasses.text.primary} mb-3`}>
+                      Key Focus Areas:
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {initiative.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                          <span className={`text-sm ${themeClasses.text.secondary}`}>
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Impact Statistics */}
-        <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.gray}`}>
+      {/* Impact Statistics */}
+      <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
           <div className="max-w-6xl mx-auto">
-            <h2 className={`text-3xl font-bold text-center mb-12 ${getThemeClasses.text.primary}`}>
-              Our Impact
-            </h2>
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Our Impact
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Through our CSR initiatives, we're making a measurable difference in communities and the environment.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className={`${getThemeClasses.card} p-6 text-center`}>
-                  <div className="text-4xl mb-3">{stat.icon}</div>
-                  <div className={`text-2xl font-bold mb-2 ${getThemeClasses.text.primary}`}>
+              {impactStats.map((stat, index) => (
+                <div key={index} className={`${themeClasses.card} p-6 text-center hover:shadow-xl transition-all duration-300 group`}>
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className={`text-2xl font-bold mb-2 ${themeClasses.text.primary}`}>
                     {stat.value}
                   </div>
-                  <div className={`text-sm ${getThemeClasses.text.secondary}`}>
+                  <div className={`text-sm ${themeClasses.text.secondary}`}>
                     {stat.label}
                   </div>
                 </div>
@@ -126,132 +178,75 @@ const CorporateSocialResponsibility = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* CSR Initiatives */}
-        <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.light}`}>
-          <div className="max-w-7xl mx-auto">
-            <h2 className={`text-3xl font-bold text-center mb-12 ${getThemeClasses.text.primary}`}>
-              Our CSR Initiatives
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {initiatives.map((initiative) => (
-                <div key={initiative.id} className={`${getThemeClasses.card} overflow-hidden`}>
-                  <div className="relative">
-                    <img 
-                      src={initiative.image} 
-                      alt={initiative.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {initiative.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className={`text-xl font-bold mb-3 ${getThemeClasses.text.primary}`}>
-                      {initiative.title}
-                    </h3>
-                    <p className={`mb-4 ${getThemeClasses.text.secondary}`}>
-                      {initiative.description}
-                    </p>
-                    <div className={`p-3 bg-green-50 dark:bg-green-900/20 rounded-lg`}>
-                      <p className={`text-sm font-medium ${getThemeClasses.text.primary}`}>
-                        <span className="text-green-600 dark:text-green-400">Impact: </span>
-                        {initiative.impact}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      {/* Mission Statement */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className={`${themeClasses.card} p-8 sm:p-12`}>
+              <div className="text-6xl mb-6">🌊</div>
+              <h2 className={`text-2xl sm:text-3xl font-bold ${themeClasses.text.primary} mb-6`}>
+                Our CSR Mission
+              </h2>
 
-        {/* Sustainability Goals */}
-        <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.gray}`}>
-          <div className="max-w-6xl mx-auto">
-            <h2 className={`text-3xl font-bold text-center mb-12 ${getThemeClasses.text.primary}`}>
-              Sustainability Goals 2025
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className={`${getThemeClasses.card} p-8`}>
-                <div className="text-5xl mb-4">🎯</div>
-                <h3 className={`text-2xl font-bold mb-4 ${getThemeClasses.text.primary}`}>
-                  Environmental Goals
-                </h3>
-                <ul className={`space-y-3 ${getThemeClasses.text.secondary}`}>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    Achieve carbon neutrality by 2025
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    100% renewable energy usage
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    Zero waste to landfill
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    Water recycling rate of 95%
-                  </li>
-                </ul>
+              <blockquote className={`text-lg sm:text-xl italic ${themeClasses.text.secondary} leading-relaxed mb-8`}>
+                "Through our corporate and social responsibility initiatives, we aim not only to provide high-quality water treatment solutions but also to make a meaningful contribution toward a cleaner, healthier, and more sustainable future."
+              </blockquote>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className={`${themeClasses.button.primary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
+                >
+                  Partner With Us
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a
+                  href="/about"
+                  className={`${themeClasses.button.secondary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
+                >
+                  Learn More About Us
+                </a>
               </div>
-              <div className={`${getThemeClasses.card} p-8`}>
-                <div className="text-5xl mb-4">🤝</div>
-                <h3 className={`text-2xl font-bold mb-4 ${getThemeClasses.text.primary}`}>
-                  Social Goals
-                </h3>
-                <ul className={`space-y-3 ${getThemeClasses.text.secondary}`}>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    Provide clean water to 50,000+ people
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    Educate 100,000+ students on water conservation
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    20,000+ volunteer hours annually
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    Support 200+ community projects
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Get Involved */}
-        <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.light} text-center`}>
-          <div className="max-w-3xl mx-auto">
-            <h2 className={`text-3xl font-bold mb-6 ${getThemeClasses.text.primary}`}>
-              Get Involved
-            </h2>
-            <p className={`text-lg mb-8 ${getThemeClasses.text.secondary}`}>
-              Join us in making a difference. Whether you're a client, partner, or community member, 
-              there are many ways to get involved in our CSR initiatives.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className={getThemeClasses.button.primary}>
-                Partner With Us
-              </button>
-              <button className={getThemeClasses.button.secondary}>
-                Volunteer Opportunities
-              </button>
-              <button className={getThemeClasses.button.success}>
-                Donate to Projects
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </PageTemplate>
+
+      {/* Call to Action */}
+      <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className={`text-2xl sm:text-3xl font-bold ${themeClasses.text.primary} mb-6`}>
+              Join Us in Making a Difference
+            </h2>
+            <p className={`text-lg ${themeClasses.text.secondary} mb-8 leading-relaxed`}>
+              Together, we can create a sustainable future where clean water is accessible to all. 
+              Whether you're a client, partner, or community member, there are many ways to get involved in our CSR initiatives.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className={`${themeClasses.button.primary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
+              >
+                Get Involved
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="/gallery"
+                className={`${themeClasses.button.secondary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
+              >
+                View Our Projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
