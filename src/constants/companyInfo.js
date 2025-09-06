@@ -161,7 +161,7 @@ export const COMPANY_INFO = {
   },
   
   // Copyright
-  copyright: "© 2024 Shree Sai Water Services. All rights reserved."
+  copyright: "© 2025 Shree Sai Water Services. All rights reserved."
 };
 
 // Export individual sections for specific use cases
