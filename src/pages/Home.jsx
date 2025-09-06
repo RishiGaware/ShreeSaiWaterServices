@@ -98,7 +98,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="hero-section min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-no-repeat pt-0" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")' }}>
+      <section className="hero-section min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-no-repeat pt-0" style={{ backgroundImage: 'url("/bg.jpg")' }}>
         {/* Dark Overlay with Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-blue-900/60 backdrop-blur-sm"></div>
         
