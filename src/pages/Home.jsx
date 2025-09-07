@@ -112,19 +112,8 @@ const Home = () => {
         {/* Content Container */}
         <div className="container-custom relative z-10 text-center">
           {/* Logo Section */}
-          <div className="mb-6 sm:mb-8 animate-fade-in-down">
-            <div className="inline-flex items-center justify-center mb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 backdrop-blur-sm">
-                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-              </div>
-            </div>
-            <div className="text-center">
-              <span className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
-                SSWS
-              </span>
-            </div>
+          <div className="mb-6 sm:mb-8 animate-fade-in-down flex justify-center">
+            <img src="/logo.png" alt="SSWS" className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 transform group-hover:scale-105 transition-all duration-300 drop-shadow-lg" />
           </div>
 
           {/* Main Heading with Enhanced Typography */}

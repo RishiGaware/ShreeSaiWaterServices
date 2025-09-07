@@ -4,26 +4,22 @@ import { colors, generateDarkModeColors } from './colors';
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(true); // Default to dark mode
-  const [currentColors, setCurrentColors] = useState(generateDarkModeColors()); // Start with dark colors
+  const [isDark, setIsDark] = useState(false); // Default to light mode
+  const [currentColors, setCurrentColors] = useState(colors); // Start with light colors
 
   useEffect(() => {
-    // Force dark mode on component mount
-    const applyDarkMode = () => {
+    // Check if there's a saved preference, otherwise use light mode as default
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
       setIsDark(true);
       setCurrentColors(generateDarkModeColors());
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    };
-
-    // Check if there's a saved preference, otherwise force dark mode
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
+    } else {
+      // Default to light mode
       setIsDark(false);
       setCurrentColors(colors);
       document.documentElement.classList.remove('dark');
-    } else {
-      applyDarkMode();
+      localStorage.setItem('theme', 'light');
     }
   }, []);
 
