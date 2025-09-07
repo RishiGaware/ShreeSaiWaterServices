@@ -81,7 +81,7 @@ const Leadership = () => {
                 Founder & Managing Director
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-            </div>
+        </div>
 
             {leadershipTeam.map((leader, index) => (
               <div key={index} className={`${themeClasses.card} p-8 sm:p-10 lg:p-12 mb-8`}>
@@ -89,9 +89,9 @@ const Leadership = () => {
                   {/* Leader Image */}
                   <div className="lg:col-span-1 flex justify-center lg:justify-start">
                     <div className="relative">
-                      <img
-                        src={leader.image}
-                        alt={leader.name}
+                  <img 
+                    src={leader.image} 
+                    alt={leader.name}
                         className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-xl"
                         onError={(e) => {
                           e.target.style.display = 'none';
@@ -123,8 +123,8 @@ const Leadership = () => {
                     <div className="space-y-6">
                       <div>
                         <p className={`text-base sm:text-lg ${themeClasses.text.secondary} leading-relaxed`}>
-                          {leader.bio}
-                        </p>
+                      {leader.bio}
+                    </p>
                       </div>
 
                       <div>
@@ -207,13 +207,13 @@ const Leadership = () => {
                     <p className={`text-sm sm:text-base ${themeClasses.text.secondary} leading-relaxed`}>
                       {member.bio}
                     </p>
-                  </div>
-                </div>
-              ))}
+              </div>
+            </div>
+          ))}
             </div>
           </div>
         </div>
-      </div>
+        </div>
 
       {/* Call to Action */}
       <div className="py-16 sm:py-20">
@@ -224,23 +224,23 @@ const Leadership = () => {
             </h2>
             <p className={`text-lg sm:text-xl ${themeClasses.text.secondary} mb-8 leading-relaxed`}>
               Our experienced leadership and technical team is ready to help you find the perfect water treatment solution for your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
                 href="/contact"
                 className={`${themeClasses.button.primary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
-              >
+            >
                 Get in Touch
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a
+            </a>
+            <a 
                 href="/about"
                 className={`${themeClasses.button.secondary} inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105`}
-              >
+            >
                 Learn More About Us
-              </a>
+            </a>
             </div>
           </div>
         </div>

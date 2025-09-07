@@ -67,7 +67,7 @@ const AboutUs = () => {
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
+          <div>
                 <h2 className={`text-2xl sm:text-3xl font-bold ${themeClasses.text.primary} mb-6`}>
                   Company Overview
                 </h2>
@@ -145,7 +145,7 @@ const AboutUs = () => {
                 <p className={`${themeClasses.text.secondary} leading-relaxed`}>
                   {COMPANY_INFO.mission}
                 </p>
-              </div>
+        </div>
 
               <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💎</div>
@@ -247,12 +247,12 @@ const AboutUs = () => {
                   <span className={`text-sm font-medium ${themeClasses.text.primary} group-hover:text-blue-600 transition-colors duration-300`}>
                     {industry}
                   </span>
-                </div>
-              ))}
+              </div>
+            ))}
             </div>
           </div>
+          </div>
         </div>
-      </div>
 
       {/* Contact Information */}
       <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
