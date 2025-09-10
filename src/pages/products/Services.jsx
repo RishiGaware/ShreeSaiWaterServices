@@ -47,6 +47,20 @@ const Services = () => {
       description: 'Professional installation and commissioning services for all water treatment systems.',
       icon: '🚀',
       features: ['Expert installation', 'System testing', 'Performance validation', 'Operator training']
+    },
+    {
+      id: 7,
+      title: 'Chemical Supply and Dosing',
+      description: 'Complete chemical supply and automated dosing solutions for optimal water treatment performance.',
+      icon: '🧪',
+      features: ['Chemical supply', 'Dosing systems', 'Dosage optimization', 'Performance monitoring']
+    },
+    {
+      id: 8,
+      title: 'Chemical Analysis and Testing',
+      description: 'Comprehensive water analysis and chemical testing services to ensure optimal treatment efficiency.',
+      icon: '🔬',
+      features: ['Water quality analysis', 'Chemical testing', 'Dosage recommendations', 'Performance optimization']
     }
   ];
 

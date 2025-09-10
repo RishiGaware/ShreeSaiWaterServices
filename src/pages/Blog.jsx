@@ -111,12 +111,12 @@ const Blog = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className={`${getThemeClasses.hero} rounded-2xl mb-16`}>
+        <div className={`${getThemeClasses.background.gradient} rounded-2xl mb-16`}>
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 pt-16">
               Water Treatment Insights
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto pt-4 pb-16">
               Expert knowledge, industry trends, and innovative solutions for water management
             </p>
           </div>

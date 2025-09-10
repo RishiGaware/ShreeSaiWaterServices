@@ -52,7 +52,7 @@ const AboutUs = () => {
       <div className={`${themeClasses.background.gradient} py-16 sm:py-20 lg:py-24`}>
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               About {COMPANY_INFO.name}
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">

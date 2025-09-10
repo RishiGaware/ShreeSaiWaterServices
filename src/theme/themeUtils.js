@@ -29,7 +29,7 @@ export const getThemeClasses = {
     card: 'bg-white dark:bg-gray-800',
     navbar: 'bg-white dark:bg-gray-900',
     footer: 'bg-gray-900 dark:bg-black',
-    gradient: 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-blue-900 dark:via-blue-800 dark:to-blue-900',
+    gradient: 'bg-gradient-to-br from-cyan-200 via-sky-300 to-blue-400 dark:from-cyan-700 dark:via-sky-800 dark:to-blue-900 text-gray-800 dark:text-gray-100',
   },
   
   // Text classes

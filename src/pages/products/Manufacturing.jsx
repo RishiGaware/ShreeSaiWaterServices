@@ -205,6 +205,100 @@ const Manufacturing = () => {
           </div>
         </div>
 
+        {/* Chemical Manufacturing Section */}
+        <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.gray}`}>
+          <div className="max-w-7xl mx-auto">
+            <h2 className={`text-3xl font-bold text-center mb-12 ${getThemeClasses.text.primary}`}>
+              Chemical Manufacturing
+            </h2>
+            <div className="text-center mb-12">
+              <p className={`text-lg mb-6 ${getThemeClasses.text.secondary} max-w-4xl mx-auto`}>
+                Our portfolio includes key water treatment chemicals to meet industry standards and enhance the efficiency of water treatment systems.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Cooling Water Biocides */}
+              <div className={`${getThemeClasses.card} p-8`}>
+                <h3 className={`text-2xl font-bold mb-6 ${getThemeClasses.text.primary} flex items-center`}>
+                  <span className="text-3xl mr-3">🧪</span>
+                  Cooling Water Biocides
+                </h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-4">
+                    <h4 className={`text-lg font-semibold mb-2 ${getThemeClasses.text.brand}`}>SSWS-602</h4>
+                    <p className={`text-sm ${getThemeClasses.text.secondary}`}>
+                      Specially manufactured for ionizing scale depositing substances like Calcium, Magnesium. 
+                      Works as prevention from scale & corrosion. Dosing on daily basis on quantity of water present in tank & make up water.
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-4">
+                    <h4 className={`text-lg font-semibold mb-2 ${getThemeClasses.text.brand}`}>SSWS-605</h4>
+                    <p className={`text-sm ${getThemeClasses.text.secondary}`}>
+                      Special design chemical for algae & slime. Reduces growth of micro organism present in water 
+                      which responsible for aerobic & anaerobic oxidation which causes chock-ups & formation of algae. 
+                      Dosing once in a week as shock treatment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cooling Water Antiscalant */}
+              <div className={`${getThemeClasses.card} p-8`}>
+                <h3 className={`text-2xl font-bold mb-6 ${getThemeClasses.text.primary} flex items-center`}>
+                  <span className="text-3xl mr-3">⚗️</span>
+                  Cooling Water Antiscalant
+                </h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-blue-500 pl-4">
+                    <h4 className={`text-lg font-semibold mb-2 ${getThemeClasses.text.brand}`}>SSWS-202</h4>
+                    <p className={`text-sm ${getThemeClasses.text.secondary}`}>
+                      Cooling tower normally put in open atmosphere which contains dust particles. It can stick on cooling towers 
+                      easily & causes scaling. This chemical works as settle down these dust particles as well as it works as a 
+                      corrosion inhibitor. It does not allow corrode metal parts. Dosing maintaining pH on daily basis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mould Tube */}
+              <div className={`${getThemeClasses.card} p-8`}>
+                <h3 className={`text-2xl font-bold mb-6 ${getThemeClasses.text.primary} flex items-center`}>
+                  <span className="text-3xl mr-3">🔧</span>
+                  Mould Tube
+                </h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-green-500 pl-4">
+                    <h4 className={`text-lg font-semibold mb-2 ${getThemeClasses.text.brand}`}>SSWS-23862</h4>
+                    <p className={`text-sm ${getThemeClasses.text.secondary}`}>
+                      Utilizing SSWS 23862 helps prevent black coating formation on mould tubes, thereby enhancing heat transfer 
+                      efficiency and extending equipment lifespan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* RO Antiscalant */}
+              <div className={`${getThemeClasses.card} p-8`}>
+                <h3 className={`text-2xl font-bold mb-6 ${getThemeClasses.text.primary} flex items-center`}>
+                  <span className="text-3xl mr-3">💧</span>
+                  RO Antiscalant
+                </h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-orange-500 pl-4">
+                    <h4 className={`text-lg font-semibold mb-2 ${getThemeClasses.text.brand}`}>RO ANTISCLANT 111</h4>
+                    <p className={`text-sm ${getThemeClasses.text.secondary}`}>
+                      Antiscalant 111 prevents scale formation heavy metals such as Calcium Magnesium Silica Sulphate etc. 
+                      Extends membrane life, reduces maintenance costs, ensures compatibility with a wide range of feed waters 
+                      and minimizes system downtime delivering reliable and efficient performance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Manufacturing Facilities */}
         <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.gray}`}>
           <div className="max-w-7xl mx-auto">

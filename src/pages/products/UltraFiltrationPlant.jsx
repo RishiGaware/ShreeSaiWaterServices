@@ -71,8 +71,8 @@ const UltraFiltrationPlant = () => {
                 alt="Ultra Filtration Plant" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            </div>  
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Ultra Filtration Plant
             </h1>
             <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">

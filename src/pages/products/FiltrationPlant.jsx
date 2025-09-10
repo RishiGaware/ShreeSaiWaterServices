@@ -69,12 +69,12 @@ const FiltrationPlant = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <img 
-                src="/products/Filteration Plant.png" 
+                src="/products/Water Filtration/Water Filtration 1.png" 
                 alt="Filtration Plant" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Filtration Plant
             </h1>
             <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
@@ -107,6 +107,95 @@ const FiltrationPlant = () => {
               <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed`}>
                 <strong>Filtration is the process of removing suspended impurities and turbidity from the water. {COMPANY_INFO.shortName} offer you all media, cartridge & membrane filtration technologies. Media filtration is the first step in most water purification system.</strong>
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Product Gallery */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Our Water Filtration Products
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Explore our comprehensive range of water filtration systems and equipment.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/Water Filtration/Water Filtration 1.png" 
+                  alt="Main Filtration Plant" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  Main Filtration Plant
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  Complete water filtration system for industrial applications
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/Water Filtration/Water Filtration 2.HEIC" 
+                  alt="Sand Filter System" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  Sand Filter System
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  Advanced sand filtration for removing suspended particles
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/Water Filtration/Water Filtration 3.JPG" 
+                  alt="Sand Filter Unit" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  Sand Filter Unit
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  Compact sand filter unit for smaller applications
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/Water Filtration/Water Filtration 4.jpg" 
+                  alt="Ultra Filtration System" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  Ultra Filtration System
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  High-performance ultra filtration for fine particle removal
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/Water Filtration/Water Filtration 5.jpg" 
+                  alt="RO Filtration Unit" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  RO Filtration Unit
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  Reverse osmosis system for pure water production
+                </p>
+              </div>
             </div>
           </div>
         </div>

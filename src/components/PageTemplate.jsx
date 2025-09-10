@@ -2,11 +2,14 @@ import React from 'react';
 import { getThemeClasses } from '../theme/themeUtils';
 
 const PageTemplate = ({ title, description, children }) => {
+  const themeClasses = getThemeClasses;
+
   return (
     <div className={`${getThemeClasses.background.primary} transition-colors duration-200`}>
+
       {/* Page Header */}
-      <div className={`${getThemeClasses.section.padding} ${getThemeClasses.section.background.gray}`}>
-        <div className="max-w-4xl mx-auto text-center">
+      <div className={`${themeClasses.background.gradient} py-16 sm:py-20 lg:py-24`}>
+          <div className="max-w-4xl mx-auto text-center">
           <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${getThemeClasses.text.primary}`}>
             {title}
           </h1>
@@ -17,7 +20,7 @@ const PageTemplate = ({ title, description, children }) => {
       </div>
 
       {/* Page Content */}
-      <div className={`${getThemeClasses.background.primary} transition-colors duration-200`}>
+      <div className={`${getThemeClasses.background.primary} transition-colors duration-200 mt-16`}>
         {children}
       </div>
     </div>

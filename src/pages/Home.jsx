@@ -58,7 +58,7 @@ const Home = () => {
     {
       name: 'Filtration Plant',
       description: 'Media, cartridge & membrane filtration technologies',
-      image: '/products/Filteration Plant.png',
+      image: '/products/Water Filtration/Water Filtration 1.png',
       path: '/products/filtration-plant',
       icon: '🏭'
     },
@@ -79,7 +79,7 @@ const Home = () => {
     {
       name: 'DM Plant',
       description: 'Demineralization and deionization systems',
-      image: '/products/De minoralization Plant.png',
+      image: '/products/DM Plant/DMPlant1.jpg',
       path: '/products/dm-plant',
       icon: '🧪'
     }

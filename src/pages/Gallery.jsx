@@ -126,24 +126,24 @@ const Gallery = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 bg-gradient-to-r from-corporate-blue to-blue-800 rounded-xl p-8 text-white text-center">
+        <div className="mt-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-6">Our Project Impact</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl font-bold mb-2">500+</div>
-              <div className="text-blue-100">Projects Completed</div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">500+</div>
+              <div className="text-gray-600">Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">25+</div>
-              <div className="text-blue-100">Countries Served</div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">25+</div>
+              <div className="text-gray-600">Countries Served</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">1M+</div>
-              <div className="text-blue-100">Lives Impacted</div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">1M+</div>
+              <div className="text-gray-600">Lives Impacted</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">99.9%</div>
-              <div className="text-blue-100">Client Satisfaction</div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">99.9%</div>
+              <div className="text-gray-600">Client Satisfaction</div>
             </div>
           </div>
         </div>

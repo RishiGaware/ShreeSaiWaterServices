@@ -60,12 +60,12 @@ const DMPlant = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <img 
-                src="/products/De minoralization Plant.png" 
+                src="/products/DM Plant/DMPlant1.jpg" 
                 alt="Demineralization (DM) Plant" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Demineralization (DM) Plant
             </h1>
             <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
@@ -113,6 +113,53 @@ const DMPlant = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Product Gallery */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Our DM Plant Products
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Explore our comprehensive range of demineralization plant systems and equipment.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/DM Plant/DMPlant1.jpg" 
+                  alt="DM Plant System 1" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  DM Plant System 1
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  Advanced demineralization system for industrial water treatment applications
+                </p>
+              </div>
+
+              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <img 
+                  src="/products/DM Plant/DMPlant2.jpg" 
+                  alt="DM Plant System 2" 
+                  className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+                />
+                <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-2`}>
+                  DM Plant System 2
+                </h3>
+                <p className={`text-sm ${themeClasses.text.secondary}`}>
+                  High-capacity demineralization plant for large-scale industrial operations
+                </p>
               </div>
             </div>
           </div>
