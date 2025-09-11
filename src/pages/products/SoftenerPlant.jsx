@@ -66,7 +66,7 @@ const SoftenerPlant = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <img 
-                src="/products/Softner Plant.png" 
+                src="/products/Softner/Softner 1.jpg" 
                 alt="Water Softener Plant" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
@@ -119,6 +119,70 @@ const SoftenerPlant = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Product Gallery */}
+      <div className="py-16 sm:py-20">
+        <div className="container-custom">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                Product Gallery
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                Explore our range of water softener plants and systems.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="group">
+                <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src="/products/Softner/Softner 1.jpg" 
+                    alt="Water Softener Plant 1" 
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="text-lg font-semibold">Water Softener Plant</h3>
+                    <p className="text-sm text-blue-200">Ion exchange technology</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group">
+                <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src="/products/Softner/Softner 2.JPG" 
+                    alt="Water Softener Plant 2" 
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="text-lg font-semibold">Softener System</h3>
+                    <p className="text-sm text-blue-200">High efficiency design</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group">
+                <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src="/products/Softner/Softner 3.jpg" 
+                    alt="Water Softener Plant 3" 
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="text-lg font-semibold">Industrial Softener</h3>
+                    <p className="text-sm text-blue-200">Custom configurations</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

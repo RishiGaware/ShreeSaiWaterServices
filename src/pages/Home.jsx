@@ -65,14 +65,14 @@ const Home = () => {
     {
       name: 'Softener Plant',
       description: 'Ion exchange technology for water softening',
-      image: '/products/Softner Plant.png',
+      image: '/products/Softner/Softner 1.jpg',
       path: '/products/softener-plant',
       icon: '💧'
     },
     {
       name: 'Ultra Filtration Plant',
       description: 'Advanced ultrafiltration with microprocessor control',
-      image: '/products/Ultra Filtration Plant.png',
+      image: '/products/Ultra Filtration/Ultra Filtration.jpg',
       path: '/products/ultra-filtration-plant',
       icon: '🔬'
     },

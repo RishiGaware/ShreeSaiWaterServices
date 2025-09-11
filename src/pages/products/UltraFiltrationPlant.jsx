@@ -67,7 +67,7 @@ const UltraFiltrationPlant = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <img 
-                src="/products/Ultra Filtration Plant.png" 
+                src="/products/Ultra Filtration/Ultra Filtration.jpg" 
                 alt="Ultra Filtration Plant" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
