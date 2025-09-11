@@ -391,7 +391,7 @@ const Infrastructure = () => {
                   </div>
                   <div className="text-blue-100 font-semibold text-sm sm:text-base">Production</div>
                 </div>
-              </div>
+            </div>
             </div>
           </div>
         </div>
