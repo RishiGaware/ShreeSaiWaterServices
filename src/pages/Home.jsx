@@ -58,9 +58,16 @@ const Home = () => {
     {
       name: 'Filtration Plant',
       description: 'Media, cartridge & membrane filtration technologies',
-      image: '/products/Water Filtration/Water Filtration 1.png',
+      image: '/products/Water Filtration/Water Filtration 3.JPG',
       path: '/products/filtration-plant',
       icon: '🏭'
+    },
+    {
+      name: 'Advanced Filtration',
+      description: 'High-efficiency filtration systems for industrial applications',
+      image: '/products/Water Filtration/Water Filtration 4.jpg',
+      path: '/products/filtration-plant',
+      icon: '🔧'
     },
     {
       name: 'Softener Plant',
@@ -367,7 +374,7 @@ const Home = () => {
                 </svg>
             </Link>
               <Link
-                to="/products"
+                to="/products/water-treatment"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-blue-600 inline-flex items-center justify-center"
               >
                 View All Products

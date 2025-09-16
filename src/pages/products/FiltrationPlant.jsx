@@ -69,7 +69,7 @@ const FiltrationPlant = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <img 
-                src="/products/Water Filtration/Water Filtration 1.png" 
+                src="/products/Water Filtration/Water Filtration 5.jpg" 
                 alt="Filtration Plant" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
@@ -126,7 +126,7 @@ const FiltrationPlant = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
                 <img 
-                  src="/products/Water Filtration/Water Filtration 1.png" 
+                  src="/products/Water Filtration/Water Filtration 5.jpg" 
                   alt="Main Filtration Plant" 
                   className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
                 />
@@ -138,7 +138,7 @@ const FiltrationPlant = () => {
                 </p>
               </div>
 
-              <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+              {/* <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
                 <img 
                   src="/products/Water Filtration/Water Filtration 2.HEIC" 
                   alt="Sand Filter System" 
@@ -150,7 +150,7 @@ const FiltrationPlant = () => {
                 <p className={`text-sm ${themeClasses.text.secondary}`}>
                   Advanced sand filtration for removing suspended particles
                 </p>
-              </div>
+              </div> */}
 
               <div className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
                 <img 
