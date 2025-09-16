@@ -16,8 +16,8 @@ export const COMPANY_INFO = {
     phoneSecondary: "+91 8669174139",
     email: "shreesaiwaterservices@gmail.com",
     website: "www.shreesaiwaterservices.com",
-    address: "Plot No 15A, Sankalp Nagar, Mayur Park Road Harsool, Aurangabad 431003, Maharashtra, India",
-    addressSecondary: "Plot No 10/11, Narendra Housing Society, N-7, CIDCO, Aurangabad 431003, Maharashtra, India",
+    address: "Plot No. 11/10, Narendra Housing Society, N-7, Cidco, Near Ramleela Ground, Chhatrapati Sambhajinagar, Pin- 431003",
+    addressSecondary: "Plot No. 11/10, Narendra Housing Society, N-7, Cidco, Near Ramleela Ground, Chhatrapati Sambhajinagar, Pin- 431003, India",
     contactPerson: "Mr. G. M. Patil"
   },
   
@@ -40,8 +40,8 @@ export const COMPANY_INFO = {
   
   // Business Hours
   businessHours: {
-    weekdays: "9:00 AM - 6:00 PM",
-    saturday: "9:00 AM - 2:00 PM",
+    weekdays: "10:00 AM - 6:00 PM",
+    saturday: "10:00 AM - 3:00 PM",
     sunday: "Closed",
     emergency: "24/7 Emergency Support Available"
   },
@@ -133,7 +133,7 @@ export const COMPANY_INFO = {
     responsibilities: [
       "Design and Engineering Consultancy",
       "Raw water treatment",
-      "Desalination and Reverse osmosis",
+      "Descalination and Reverse osmosis",
       "Demineralization and Dealkalisation",
       "Turnkey Mineral water plants",
       "Operation and maintenance of treatment plant",
@@ -147,7 +147,7 @@ export const COMPANY_INFO = {
     "Patent of various technologies and design copy right",
     "Maximum number of staff members to attend customers",
     "2000+ RO Plants installed all over Maharashtra & India",
-    "Service Centre available in multiple cities",
+    "Service available in multiple cities",
     "Quality Material and delivers best performance projects",
     "Always keeps almost all equipments/material in stock (Ready to Dispatch)"
   ],

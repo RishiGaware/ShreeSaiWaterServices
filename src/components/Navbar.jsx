@@ -152,7 +152,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link
+            {/* <Link
               to="/gallery"
               className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 ${
                 isActive('/gallery') 
@@ -172,7 +172,7 @@ const Navbar = () => {
               }`}
             >
               Blog
-            </Link>
+            </Link> */}
 
             <Link
               to="/contact"

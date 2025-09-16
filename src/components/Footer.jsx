@@ -120,16 +120,42 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
               <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <Link 
-                      to="/products/water-treatment" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm hover:translate-x-1 transform transition-transform duration-200 inline-block"
-                    >
-                      {service}
-                    </Link>
-                  </li>
-                ))}
+                {services.map((service, index) => {
+                  // Map service names to their corresponding routes
+                  const getServiceRoute = (serviceName) => {
+                    switch (serviceName) {
+                      case "Water Treatment Plants":
+                        return "/products/water-treatment";
+                      case "RO Systems":
+                        return "/products/water-treatment";
+                      case "Softener Plants":
+                        return "/products/softener-plant";
+                      case "DM Water Plants":
+                        return "/products/dm-plant";
+                      case "Ultra Filtration Plants":
+                        return "/products/ultra-filtration-plant";
+                      case "Sand Filtration Plants":
+                        return "/products/filtration-plant";
+                      case "Chemical Spares":
+                        return "/products/water-treatment";
+                      case "Maintenance Services":
+                        return "/contact";
+                      default:
+                        return "/products/water-treatment";
+                    }
+                  };
+
+                  return (
+                    <li key={index}>
+                      <Link 
+                        to={getServiceRoute(service)} 
+                        className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm hover:translate-x-1 transform transition-transform duration-200 inline-block"
+                      >
+                        {service}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

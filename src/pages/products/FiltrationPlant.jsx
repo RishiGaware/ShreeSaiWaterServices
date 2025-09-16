@@ -80,9 +80,6 @@ const FiltrationPlant = () => {
             <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
               WATER FILTRATION & TREATMENT
             </div>
-            <div className="text-lg text-blue-100 mb-6">
-              MR. G. M. PATIL
-            </div>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               {COMPANY_INFO.shortName} has been involved since 2004 in offering a wide spectrum of high quality industrial RO Plants, De-mineralization Plants, Water Softener Solutions for extensive range of applications commercial RO Plants.
             </p>

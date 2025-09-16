@@ -7,10 +7,10 @@ const Leadership = () => {
 
   const leadershipTeam = [
     {
-      name: "Gajanan Patil",
+      name: "Mr. Gajanan Patil",
       position: "Founder & Managing Director",
       image: "/api/placeholder/300/300",
-      bio: "With a clear vision to provide reliable and sustainable water solutions, Gajanan Patil has been at the forefront of the water treatment industry for over a decade. Under his leadership, the company has grown into a trusted name in Reverse Osmosis (RO), Ultra Filtration (UF), and advanced water purification technologies.",
+      bio: "With a clear vision to provide reliable and sustainable water solutions,Mr. Gajanan Patil has been at the forefront of the water treatment industry for over a decade. Under his leadership, the company has grown into a trusted name in Reverse Osmosis (RO), Ultra Filtration (UF), and advanced water purification technologies.",
       expertise: "Gajanan strongly believes that access to clean and safe water is not just a necessity but a responsibility. His focus on innovation, cost-effectiveness, and customer satisfaction has helped industries, commercial establishments, and communities achieve efficient water management.",
       vision: "Guided by his expertise and commitment, the company continues to deliver customized solutions that meet international standards, while ensuring long-term sustainability and reliability.",
       message: "Our mission is to create world-class water treatment solutions that not only serve today's needs but also safeguard resources for the future. With every project, we strive to build trust, deliver quality, and make clean water accessible for all."
@@ -19,37 +19,37 @@ const Leadership = () => {
 
   const coreTeam = [
     {
-      name: "Kailas Dhawle",
+      name: "Mr. Kailas Dhawle",
       position: "Technical Head",
       image: "/api/placeholder/250/250",
       bio: "Kailas brings extensive hands-on technical expertise in the design, installation, and maintenance of complex water treatment systems. His strong engineering background ensures that every project is executed with precision and long-term reliability."
     },
     {
-      name: "Vinod Dhawle",
+      name: "Mr. Vinod Dhawle",
       position: "Senior Technical Consultant",
       image: "/api/placeholder/250/250",
       bio: "Known for his deep technical knowledge and problem-solving skills, Vinod specializes in troubleshooting, optimizing system performance, and guiding clients on sustainable solutions tailored to their unique requirements."
     },
     {
-      name: "Kiran Patil",
+      name: "Mr. Kiran Patil",
       position: "Chemical Expert",
       image: "/api/placeholder/250/250",
       bio: "Kiran brings specialized knowledge in water chemistry and treatment processes. His expertise ensures the right balance of treatment solutions, improving efficiency and extending the life of plants while meeting regulatory standards."
     },
     {
-      name: "Shivam Surve",
+      name: "Mr. Shivam Surve",
       position: "Service & Support Head",
       image: "/api/placeholder/250/250",
       bio: "Dedicated to after-sales service and client satisfaction, Shivam leads the service division with a strong focus on timely maintenance, system upgrades, and customer support—ensuring plants operate smoothly with minimal downtime."
     },
     {
-      name: "Suresh Chikate",
+      name: "Mr. Suresh Chikate",
       position: "Head of Accounts & Finance",
       image: "/api/placeholder/250/250",
       bio: "Suresh oversees the company's financial operations with a commitment to transparency, accountability, and efficiency. His role ensures smooth financial management, supporting sustainable growth and long-term client relationships."
     },
     {
-      name: "Abhishek Patil",
+      name: "Mr. Abhishek Patil",
       position: "Management & Strategy",
       image: "/api/placeholder/250/250",
       bio: "As part of the management team, Abhishek plays a key role in strategic planning, operations, and organizational growth. With a strong focus on efficiency and innovation, he helps align the company's vision with its long-term business goals, ensuring steady progress and continuous improvement."

@@ -32,7 +32,7 @@ const WaterTreatment = () => {
       icon: '🧪'
     },
     {
-      step: 'Micron Filtration (2 Nos.)',
+      step: 'Micron Filtration',
       description: 'These are pressure Vessels fitted internally with pleated cartridge elements of 5 micron & 20 micron rating, which removes micron sized particles.',
       icon: '🔬'
     },
@@ -42,7 +42,7 @@ const WaterTreatment = () => {
       icon: '⚙️'
     },
     {
-      step: 'Desalination System by RO Membrane',
+      step: 'Descalination System by RO Membrane',
       description: 'A reverse Osmosis System reject 90-95% of Total Dissolved Solids (TDS).',
       icon: '💧'
     },
@@ -66,7 +66,7 @@ const WaterTreatment = () => {
   const applications = [
     'Drinking water', 'Kidney dialysis machine', 'Boiler feed water treatment',
     'Cooling tower water treatment', 'Production of USP grade water',
-    'Zero-liquid discharge', 'Seawater Desalination', 'Effluent Treatment'
+    'Zero-liquid discharge', 'Seawater Descalination', 'Effluent Treatment'
   ];
 
   const industries = [
@@ -93,9 +93,6 @@ const WaterTreatment = () => {
             </h1>
             <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
               WATER FILTRATION & TREATMENT
-            </div>
-            <div className="text-lg text-blue-100 mb-6">
-              MR. G. M. PATIL
             </div>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               {COMPANY_INFO.shortName} brings to you India's most reliable and cost effective industrial reverse osmosis water systems for drinking, laboratory and healthcare applications, capacities available from 100 lph to 50000 lph or more.

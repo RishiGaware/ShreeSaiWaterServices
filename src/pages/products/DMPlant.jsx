@@ -71,9 +71,6 @@ const DMPlant = () => {
             <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
               WATER FILTRATION & TREATMENT
             </div>
-            <div className="text-lg text-blue-100 mb-6">
-              MR. G. M. PATIL
-            </div>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               The Demineralization process, also known as Deionization, is an economical option when feed water TDS is low and low conductivity product water is required.
             </p>

@@ -9,6 +9,7 @@ const Home = () => {
 
   // Customer logos array
   const customerLogos = [
+    'Radha TMT.png',
     'image_2025-08-27_170840604.png',
     'image_2025-08-27_171021271.png',
     'image_2025-08-27_171140936.png',
@@ -20,7 +21,6 @@ const Home = () => {
     'image_2025-08-27_183930911.png',
     'image_2025-08-27_184316302.png',
     'image_2025-08-27_184559448.png',
-    'image_2025-08-27_184716422.png',
     'image_2025-08-27_191341712.png',
     'image_2025-08-27_191645199.png',
     'image_2025-08-27_191848170.png',
@@ -85,11 +85,11 @@ const Home = () => {
     }
   ];
 
-  // Auto-rotate customer logos
+  // Auto-rotate customer logos (4 at a time)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentCustomerIndex((prevIndex) => 
-        (prevIndex + 1) % customerLogos.length
+        (prevIndex + 1) % Math.ceil(customerLogos.length / 4)
       );
     }, 3000);
     return () => clearInterval(interval);
@@ -244,28 +244,28 @@ const Home = () => {
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-1000 ease-in-out"
-                style={{ transform: `translateX(-${currentCustomerIndex * 100}%)` }}
+                style={{ transform: `translateX(-${currentCustomerIndex * (100 / 4)}%)` }}
               >
                 {customerLogos.map((logo, index) => (
-                  <div key={index} className="w-full flex-shrink-0 flex justify-center items-center">
-                    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div key={index} className="w-1/4 flex-shrink-0 flex justify-center items-center px-2">
+                    <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full">
                       <img 
                         src={`/Customer /${logo}`}
                         alt={`Customer ${index + 1}`}
-                        className="max-h-20 max-w-48 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        className="max-h-16 sm:max-h-20 max-w-full object-contain transition-all duration-300 mx-auto"
                         onError={(e) => {
                           e.target.style.display = 'none';
                         }}
                       />
-                </div>
-              </div>
-            ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Navigation Dots */}
             <div className="flex justify-center mt-8 space-x-2">
-              {customerLogos.slice(0, Math.ceil(customerLogos.length / 3)).map((_, index) => (
+              {Array.from({ length: Math.ceil(customerLogos.length / 4) }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentCustomerIndex(index)}
@@ -323,6 +323,28 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Stats Section */}
+      <div className="mt-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-8 text-center mb-16">
+          <h3 className="text-2xl font-bold mb-6">Our Project Impact</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">500+</div>
+              <div className="text-gray-600">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">3+</div>
+              <div className="text-gray-600">States Served</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">1M+</div>
+              <div className="text-gray-600">Lives Impacted</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">99.9%</div>
+              <div className="text-gray-600">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
 
       {/* CTA Section */}
       <section className={`py-16 sm:py-20 ${themeClasses.background.gradient}`}>

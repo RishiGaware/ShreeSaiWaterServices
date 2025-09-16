@@ -280,12 +280,12 @@ const AboutUs = () => {
                       {COMPANY_INFO.contact.address}
                     </p>
                   </div>
-                  <div>
+                  {/* <div>
                     <span className={`font-semibold ${themeClasses.text.primary}`}>Alternative Address:</span>
                     <p className={`${themeClasses.text.secondary} mt-1`}>
                       {COMPANY_INFO.contact.addressSecondary}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
