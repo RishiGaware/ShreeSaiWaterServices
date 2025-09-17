@@ -124,10 +124,10 @@ const Footer = () => {
                   // Map service names to their corresponding routes
                   const getServiceRoute = (serviceName) => {
                     switch (serviceName) {
-                      case "Water Treatment Plants":
+                      case "RO Plants":
                         return "/products/water-treatment";
-                      case "RO Systems":
-                        return "/products/water-treatment";
+                      // case "RO Systems":
+                      //   return "/products/water-treatment";
                       case "Softener Plants":
                         return "/products/softener-plant";
                       case "DM Water Plants":

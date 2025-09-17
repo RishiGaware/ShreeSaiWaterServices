@@ -37,9 +37,9 @@ const VisionMission = () => {
   const responsibilities = [
     'Design and Engineering Consultancy',
     'Raw water treatment',
-    'Descalination and Reverse osmosis',
+    'Desalination and Reverse osmosis',
     'Demineralization and Dealkalisation',
-    'Turnkey Mineral water plants',
+    'Mineral water plants',
     'Operation and maintenance of treatment plant',
     'Augmentation and expansion of the existing plant',
     'Sampling and laboratory analysis of water and wastewater'

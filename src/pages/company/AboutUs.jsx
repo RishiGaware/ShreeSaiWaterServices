@@ -90,7 +90,7 @@ const AboutUs = () => {
                     <span className={`ml-2 ${themeClasses.text.secondary}`}>2004</span>
                   </div>
                   <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Registered:</span>
+                    <span className={`font-semibold ${themeClasses.text.primary}`}> GST Registration:</span>
                     <span className={`ml-2 ${themeClasses.text.secondary}`}>2016</span>
                   </div>
                   <div>

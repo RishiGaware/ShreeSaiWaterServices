@@ -42,7 +42,7 @@ export const COMPANY_INFO = {
   businessHours: {
     weekdays: "10:00 AM - 6:00 PM",
     saturday: "10:00 AM - 3:00 PM",
-    sunday: "Closed",
+    sunday: "10:00 AM - 3:00 PM",
     emergency: "24/7 Emergency Support Available"
   },
   
@@ -58,8 +58,8 @@ export const COMPANY_INFO = {
   
   // Services
   services: [
-    "Water Treatment Plants",
-    "RO Systems", 
+    "RO Plants",
+    // "RO Systems", 
     "Softener Plants",
     "DM Water Plants",
     "Ultra Filtration Plants",
@@ -92,7 +92,7 @@ export const COMPANY_INFO = {
   
   // Product Pages
   productPages: [
-    { name: "Water Treatment Plant", path: "/products/water-treatment" },
+    { name: "RO Plant", path: "/products/water-treatment" },
     { name: "Filtration Plant", path: "/products/filtration-plant" },
     { name: "Softener Plant", path: "/products/softener-plant" },
     { name: "Ultra Filtration Plant", path: "/products/ultra-filtration-plant" },
@@ -133,9 +133,9 @@ export const COMPANY_INFO = {
     responsibilities: [
       "Design and Engineering Consultancy",
       "Raw water treatment",
-      "Descalination and Reverse osmosis",
+      "Desalination and Reverse osmosis",
       "Demineralization and Dealkalisation",
-      "Turnkey Mineral water plants",
+      "Mineral water plants",
       "Operation and maintenance of treatment plant",
       "Augmentation and expansion of the existing plant",
       "Sampling and laboratory analysis of water and wastewater"

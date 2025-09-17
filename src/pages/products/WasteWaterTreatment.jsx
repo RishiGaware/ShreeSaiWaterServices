@@ -4,13 +4,13 @@ import { getThemeClasses } from '../../theme/themeUtils';
 
 const WasteWaterTreatment = () => {
   const features = [
-    {
-      id: 1,
-      title: 'Advanced Filtration Systems',
-      description: 'Multi-stage filtration using cutting-edge membrane technology for superior water quality.',
-      icon: '🔬',
-      benefits: ['Removes 99.9% of contaminants', 'Extends membrane life', 'Reduces maintenance costs']
-    },
+    // {
+    //   id: 1,
+    //   title: 'Advanced Filtration Systems',
+    //   description: 'Multi-stage filtration using cutting-edge membrane technology for superior water quality.',
+    //   icon: '🔬',
+    //   benefits: ['Removes 99.9% of contaminants', 'Extends membrane life', 'Reduces maintenance costs']
+    // },
     {
       id: 2,
       title: 'Biological Treatment',

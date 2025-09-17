@@ -6,52 +6,52 @@ import { COMPANY_INFO } from '../constants/companyInfo';
 const Home = () => {
   const themeClasses = getThemeClasses;
   const [currentCustomerIndex, setCurrentCustomerIndex] = useState(0);
-
-  // Customer logos array
-  const customerLogos = [
-    'Radha TMT.png',
-    'image_2025-08-27_170840604.png',
-    'image_2025-08-27_171021271.png',
-    'image_2025-08-27_171140936.png',
-    'image_2025-08-27_171621589.png',
-    'image_2025-08-27_172221098.png',
-    'image_2025-08-27_173207648.png',
-    'image_2025-08-27_183347426.png',
-    'image_2025-08-27_183529996.png',
-    'image_2025-08-27_183930911.png',
-    'image_2025-08-27_184316302.png',
-    'image_2025-08-27_184559448.png',
-    'image_2025-08-27_191341712.png',
-    'image_2025-08-27_191645199.png',
-    'image_2025-08-27_191848170.png',
-    'image_2025-08-27_192359268.png',
-    'image_2025-08-27_192753885.png',
-    'image_2025-08-27_193528239.png',
-    'image_2025-08-27_194044546.png',
-    'image_2025-08-27_194417877.png',
-    'image_2025-08-27_194941343.png',
-    'image_2025-08-27_200823655.png',
-    'image_2025-08-27_201404538.png',
-    'image_2025-08-27_202001779.png',
-    'image_2025-08-27_202434312.png',
-    'image_2025-08-27_202801212.png',
-    'image_2025-08-27_203015112.png',
-    'image_2025-08-27_203514315.png',
-    'image_2025-08-27_204632454.png',
-    'image_2025-08-27_204848789.png',
-    'image_2025-08-27_205015867.png',
-    'image_2025-08-27_210252114.png',
-    'image_2025-08-27_210700710.png',
-    'Sangam Steel.jpg',
-    'smw_ispat_pvt_ltd.jpg'
-  ];
+// Customer logos array
+const customerLogos = [
+  '1.png',
+  '2.png',
+  '3.png',
+  '4.png',
+  '5.png',
+  '6.jpg',
+  '7.png',
+  '8.png',
+  '9.png',
+  '10.png',
+  '11.png',
+  '12.png',
+  '13.png',
+  '14.png',
+  '15.png',
+  '16.png',
+  '17.png',
+  '18.png',
+  '19.png',
+  '20.png',
+  '21.png',
+  '22.png',
+  '23.png',
+  '24.png',
+  '25.png',
+  '26.png',
+  '27.png',
+  '28.png',
+  '29.png',
+  '30.png',
+  '31.png',
+  '32.png',
+  '33.png',
+  '34.png',
+  '35.png',
+  '36.jpg',
+];
 
   // Product plants data
   const productPlants = [
     {
-      name: 'Water Treatment Plant',
+      name: 'RO Plant',
       description: 'Industrial Reverse Osmosis Systems for high-purity water production',
-      image: '/products/Reverse Osmosis Plant .png',
+      image: '/products/Reverse Osmosis Plant .jpg',
       path: '/products/water-treatment',
       icon: '⚗️'
     },
@@ -62,13 +62,13 @@ const Home = () => {
       path: '/products/filtration-plant',
       icon: '🏭'
     },
-    {
-      name: 'Advanced Filtration',
-      description: 'High-efficiency filtration systems for industrial applications',
-      image: '/products/Water Filtration/Water Filtration 4.jpg',
-      path: '/products/filtration-plant',
-      icon: '🔧'
-    },
+    // {
+    //   name: 'Advanced Filtration',
+    //   description: 'High-efficiency filtration systems for industrial applications',
+    //   image: '/products/Water Filtration/Water Filtration 4.jpg',
+    //   path: '/products/filtration-plant',
+    //   icon: '🔧'
+    // },
     {
       name: 'Softener Plant',
       description: 'Ion exchange technology for water softening',
@@ -255,11 +255,16 @@ const Home = () => {
               >
                 {customerLogos.map((logo, index) => (
                   <div key={index} className="w-1/4 flex-shrink-0 flex justify-center items-center px-2">
-                    <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full">
+                    <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full h-28 sm:h-32 flex items-center justify-center">
                       <img 
                         src={`/Customer /${logo}`}
                         alt={`Customer ${index + 1}`}
-                        className="max-h-16 sm:max-h-20 max-w-full object-contain transition-all duration-300 mx-auto"
+                        className="w-full h-full object-contain transition-all duration-300"
+                        style={{ 
+                          maxWidth: '100%',
+                          maxHeight: '100%',
+                          objectFit: 'contain'
+                        }}
                         onError={(e) => {
                           e.target.style.display = 'none';
                         }}
@@ -281,8 +286,14 @@ const Home = () => {
                       ? 'bg-blue-600 scale-125' 
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
+                  title={`Slide ${index + 1} of ${Math.ceil(customerLogos.length / 4)}`}
                 />
               ))}
+            </div>
+            
+            {/* Debug Info - Remove this after testing */}
+            <div className="text-center mt-4 text-sm text-gray-500">
+              Showing {customerLogos.length} logos in {Math.ceil(customerLogos.length / 4)} groups
             </div>
           </div>
         </div>
@@ -339,7 +350,7 @@ const Home = () => {
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2 text-gray-900">3+</div>
+              <div className="text-3xl font-bold mb-2 text-gray-900">10+</div>
               <div className="text-gray-600">States Served</div>
             </div>
             <div>

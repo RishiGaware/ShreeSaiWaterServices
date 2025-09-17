@@ -38,11 +38,11 @@ const WaterTreatment = () => {
     },
     {
       step: 'Osmosis Pressure System',
-      description: 'A high pressure Pump is provided for supplying the feed water to RO System at high pressure of 12-14 kg./cm.',
+      description: 'A high pressure Pump is provided for supplying the feed water to RO System.',
       icon: '⚙️'
     },
     {
-      step: 'Descalination System by RO Membrane',
+      step: 'Decalination System by RO Membrane',
       description: 'A reverse Osmosis System reject 90-95% of Total Dissolved Solids (TDS).',
       icon: '💧'
     },
@@ -64,9 +64,9 @@ const WaterTreatment = () => {
   ];
 
   const applications = [
-    'Drinking water', 'Kidney dialysis machine', 'Boiler feed water treatment',
+    'Drinking water', 'Kidney dialysis Center', 'Boiler feed water treatment',
     'Cooling tower water treatment', 'Production of USP grade water',
-    'Zero-liquid discharge', 'Seawater Descalination', 'Effluent Treatment'
+    'Zero-liquid discharge', 'Seawater Desalination', 'Effluent Treatment'
   ];
 
   const industries = [
@@ -83,7 +83,7 @@ const WaterTreatment = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <img 
-                src="/products/Reverse Osmosis Plant .png" 
+                src="/products/Reverse Osmosis Plant .jpg" 
                 alt="Industrial Reverse Osmosis Systems" 
                 className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
               />
@@ -120,32 +120,91 @@ const WaterTreatment = () => {
           
               <div className={`${themeClasses.card} p-8`}>
                 <h3 className={`text-2xl font-bold ${themeClasses.text.primary} mb-4`}>Key Benefits</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                    <span className={themeClasses.text.secondary}>99.5% dissolved solids removal</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                    <span className={themeClasses.text.secondary}>Energy efficient operation</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                    <span className={themeClasses.text.secondary}>Rugged construction</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                    <span className={themeClasses.text.secondary}>Certified instruments</span>
-              </li>
-            </ul>
+                <ul className="space-y-3">
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path
+        fillRule="evenodd"
+        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 
+        01-1.414 0l-4-4a1 1 0 
+        011.414-1.414L8 12.586l7.293-7.293a1 
+        1 0 011.414 0z"
+        clipRule="evenodd"
+      />
+    </svg>
+    <span className={themeClasses.text.secondary}>99.5% dissolved solids removal</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 
+      0 01-1.414 0l-4-4a1 1 0 
+      011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>High Purity Water</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 
+      1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 
+      0 011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>Consistent Water Quality</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 
+      1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 
+      0 011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>Cost Effective</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 
+      1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 
+      0 011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>Energy Efficient Operation</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 
+      1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 
+      0 011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>Compact & Scalable</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 
+      1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 
+      0 011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>Environment Friendly</span>
+  </li>
+
+  <li className="flex items-center">
+    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 
+      1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 
+      0 011.414-1.414L8 12.586l7.293-7.293a1 
+      1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+    <span className={themeClasses.text.secondary}>Extended Equipment Life</span>
+  </li>
+</ul>
               </div>
             </div>
           </div>
@@ -188,7 +247,7 @@ const WaterTreatment = () => {
         </div>
 
       {/* Specifications Table */}
-      <div className="py-16 sm:py-20">
+      {/* <div className="py-16 sm:py-20">
         <div className="container-custom">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -229,7 +288,7 @@ const WaterTreatment = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Applications & Industries */}
       <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
