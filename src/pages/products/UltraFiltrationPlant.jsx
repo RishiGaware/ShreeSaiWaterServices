@@ -62,28 +62,33 @@ const UltraFiltrationPlant = () => {
   return (
     <div className={`min-h-screen ${themeClasses.background.primary} ${themeClasses.text.primary}`}>
       {/* Hero Section */}
-      <div className={`${themeClasses.background.gradient} py-16 sm:py-20 lg:py-24`}>
+      <section className={`${themeClasses.background.gradient} py-16 sm:py-20`}>
         <div className="container-custom">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-8">
-              <img 
-                src="/products/Ultra Filtration/Ultra Filtration.jpg" 
-                alt="Ultra Filtration Plant" 
-                className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
-              />
-            </div>  
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Ultra Filtration Plant
-            </h1>
-            <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
-              WATER FILTRATION & TREATMENT
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
+                Ultra Filtration <span className="text-gradient-primary">Plant</span>
+              </h1>
+              <div className="text-xl sm:text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">
+                WATER FILTRATION & TREATMENT
+              </div>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                Advanced ultrafiltration package system with microprocessor control, ideal for domestic sewage recycle and raw water applications.
+              </p>
             </div>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Advanced ultrafiltration package system with microprocessor control, ideal for domestic sewage recycle and raw water applications.
-            </p>
+            <div className="order-first md:order-last">
+              <div className="relative">
+                <img 
+                  src="/products/Ultra Filtration/Ultra Filtration.jpg"
+                  alt="Ultra Filtration Plant"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Introduction */}
       <div className="py-16 sm:py-20">

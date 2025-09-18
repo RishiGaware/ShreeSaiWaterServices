@@ -6,7 +6,7 @@ import { COMPANY_INFO } from '../constants/companyInfo';
 const Home = () => {
   const themeClasses = getThemeClasses;
   const [currentCustomerIndex, setCurrentCustomerIndex] = useState(0);
-// Customer logos array
+// Customer logos array - using actual filenames from the Customer folder
 const customerLogos = [
   '1.png',
   '2.png',
@@ -43,7 +43,7 @@ const customerLogos = [
   '33.png',
   '34.png',
   '35.png',
-  '36.jpg',
+  '36.jpg'
 ];
 
   // Product plants data
@@ -86,18 +86,21 @@ const customerLogos = [
     {
       name: 'DM Plant',
       description: 'Demineralization and deionization systems',
-      image: '/products/DM Plant/DMPlant1.jpg',
+      image: '/products/DM Plant/DMPlant3.jpg',
       path: '/products/dm-plant',
       icon: '🧪'
     }
   ];
 
-  // Auto-rotate customer logos (4 at a time)
+  // Auto-rotate customer logos (3 at a time)
   useEffect(() => {
+    console.log(`Total logos: ${customerLogos.length}, Groups: ${Math.ceil(customerLogos.length / 3)}`);
     const interval = setInterval(() => {
-      setCurrentCustomerIndex((prevIndex) => 
-        (prevIndex + 1) % Math.ceil(customerLogos.length / 4)
-      );
+      setCurrentCustomerIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % Math.ceil(customerLogos.length / 3);
+        console.log(`Moving from group ${prevIndex + 1} to group ${nextIndex + 1}`);
+        return nextIndex;
+      });
     }, 3000);
     return () => clearInterval(interval);
   }, [customerLogos.length]);
@@ -248,52 +251,54 @@ const customerLogos = [
                 </div>
 
           <div className="relative">
+            {/* Customer Logos Slider - Responsive */}
             <div className="overflow-hidden">
               <div 
-                className="flex transition-transform duration-1000 ease-in-out"
-                style={{ transform: `translateX(-${currentCustomerIndex * (100 / 4)}%)` }}
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ 
+                  transform: `translateX(-${currentCustomerIndex * 100}%)`
+                }}
               >
-                {customerLogos.map((logo, index) => (
-                  <div key={index} className="w-1/4 flex-shrink-0 flex justify-center items-center px-2">
-                    <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full h-28 sm:h-32 flex items-center justify-center">
-                      <img 
-                        src={`/Customer /${logo}`}
-                        alt={`Customer ${index + 1}`}
-                        className="w-full h-full object-contain transition-all duration-300"
-                        style={{ 
-                          maxWidth: '100%',
-                          maxHeight: '100%',
-                          objectFit: 'contain'
-                        }}
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
+                {Array.from({ length: Math.ceil(customerLogos.length / 3) }).map((_, slideIndex) => (
+                  <div key={slideIndex} className="w-full flex-shrink-0 flex justify-center">
+                    <div className="flex w-full max-w-6xl justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 px-2 sm:px-4">
+                      {customerLogos.slice(slideIndex * 3, (slideIndex + 1) * 3).map((logo, logoIndex) => (
+                        <div key={logoIndex} className="flex-1 max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-xs">
+                          <div className="bg-white dark:bg-gray-800 p-2 sm:p-3 md:p-4 lg:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 flex items-center justify-center">
+                            <img 
+                              src={`/Customer/${logo}`}
+                              alt={`Customer ${slideIndex * 3 + logoIndex + 1}`}
+                              className="max-w-full max-h-full object-contain"
+                              style={{
+                                minHeight: '40px',
+                                minWidth: '40px',
+                                maxHeight: '60px',
+                                maxWidth: '60px'
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {Array.from({ length: Math.ceil(customerLogos.length / 4) }).map((_, index) => (
+            {/* Navigation Dots - Responsive */}
+            <div className="flex justify-center mt-4 sm:mt-6 md:mt-8 space-x-1 sm:space-x-2">
+              {Array.from({ length: Math.ceil(customerLogos.length / 3) }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentCustomerIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                     currentCustomerIndex === index 
                       ? 'bg-blue-600 scale-125' 
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
-                  title={`Slide ${index + 1} of ${Math.ceil(customerLogos.length / 4)}`}
+                  title={`Slide ${index + 1} of ${Math.ceil(customerLogos.length / 3)}`}
                 />
               ))}
-            </div>
-            
-            {/* Debug Info - Remove this after testing */}
-            <div className="text-center mt-4 text-sm text-gray-500">
-              Showing {customerLogos.length} logos in {Math.ceil(customerLogos.length / 4)} groups
             </div>
           </div>
         </div>

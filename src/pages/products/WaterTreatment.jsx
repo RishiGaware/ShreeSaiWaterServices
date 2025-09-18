@@ -78,28 +78,33 @@ const WaterTreatment = () => {
   return (
     <div className={`min-h-screen ${themeClasses.background.primary} ${themeClasses.text.primary}`}>
       {/* Hero Section */}
-      <div className={`${themeClasses.background.gradient} py-16 sm:py-20 lg:py-24`}>
+      <section className={`${themeClasses.background.gradient} py-16 sm:py-20`}>
         <div className="container-custom">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-8">
-              <img 
-                src="/products/Reverse Osmosis Plant .jpg" 
-                alt="Industrial Reverse Osmosis Systems" 
-                className="mx-auto max-w-full h-auto max-h-96 object-contain rounded-lg shadow-2xl"
-              />
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
+                Industrial Reverse Osmosis <span className="text-gradient-primary">Systems</span>
+              </h1>
+              <div className="text-xl sm:text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">
+                WATER FILTRATION & TREATMENT
+              </div>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                {COMPANY_INFO.shortName} brings to you India's most reliable and cost effective industrial reverse osmosis water systems for drinking, Steel Industries and healthcare applications, capacities available from 100 lph to 50000 lph or more.
+              </p>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Industrial Reverse Osmosis Systems
-            </h1>
-            <div className="text-xl sm:text-2xl font-semibold text-blue-200 mb-2">
-              WATER FILTRATION & TREATMENT
+            <div className="order-first md:order-last">
+              <div className="relative">
+                <img 
+                  src="/products/Reverse Osmosis Plant .jpg"
+                  alt="Industrial Reverse Osmosis Systems"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              </div>
             </div>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              {COMPANY_INFO.shortName} brings to you India's most reliable and cost effective industrial reverse osmosis water systems for drinking, laboratory and healthcare applications, capacities available from 100 lph to 50000 lph or more.
-            </p>
           </div>
         </div>
-        </div>
+      </section>
 
         {/* Overview Section */}
       <div className="py-16 sm:py-20">
@@ -111,7 +116,7 @@ const WaterTreatment = () => {
               Advanced Water Treatment Solutions
             </h2>
                 <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed mb-6`}>
-                  A reverse osmosis system is an essential part for every industry; whether there is need of pure water for drinking, laboratory use, healthcare (dialysis) and miscellaneous industrial and commercial applications etc. reverse osmosis plays important role everywhere considering the fact that it can remove up to 99.5% of dissolved solids and all colloidal and suspended matter from the most challenging feed water including well water, brackish and sea water.
+                  A reverse osmosis system is an essential part for every industry; whether there is need of pure water for drinking, Steel Industries use, healthcare and miscellaneous industrial and commercial applications etc. reverse osmosis plays important role everywhere considering the fact that it can remove up to 99.5% of dissolved solids and all colloidal and suspended matter from the most challenging feed water including well water, brackish and sea water.
                 </p>
                 <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed`}>
                   Using trusted membrane technology, rugged construction and certified instruments our engineering team carefully designs RO systems that meet and exceed required water quality standards.
