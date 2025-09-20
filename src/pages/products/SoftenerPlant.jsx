@@ -128,7 +128,7 @@ const SoftenerPlant = () => {
       </div>
 
       {/* Product Gallery */}
-      <div className="py-16 sm:py-20">
+      {/* <div className="py-16 sm:py-20">
         <div className="container-custom">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -189,7 +189,7 @@ const SoftenerPlant = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Features */}
       <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>

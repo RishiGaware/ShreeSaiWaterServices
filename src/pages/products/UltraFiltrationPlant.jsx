@@ -17,11 +17,6 @@ const UltraFiltrationPlant = () => {
       icon: '📦'
     },
     {
-      title: 'Domestic Sewage Recycle',
-      description: 'Ideal for recycle of domestic sewage and raw water applications.',
-      icon: '♻️'
-    },
-    {
       title: 'Complete System',
       description: 'Includes raw water pump, bag filter, UF module, dosing systems, and control panel.',
       icon: '⚙️'
@@ -40,7 +35,6 @@ const UltraFiltrationPlant = () => {
   ];
 
   const applications = [
-    'Domestic sewage treatment',
     'Raw water pretreatment',
     'Industrial wastewater treatment',
     'Municipal water treatment',
@@ -99,9 +93,9 @@ const UltraFiltrationPlant = () => {
                 <h2 className={`text-2xl sm:text-3xl font-bold ${themeClasses.text.primary} mb-6`}>
                   About Ultra Filtration
                 </h2>
-                <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed mb-6`}>
+                {/* <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed mb-6`}>
                   The system is fully automatic based on microprocessor based control. These are pre engineered plug and play kind of package. Ideal for recycle of domestic sewage recycle and raw water applications.
-                </p>
+                </p> */}
                 <p className={`text-lg ${themeClasses.text.secondary} leading-relaxed mb-6`}>
                   The system will include a raw water pump, bag filter, Ultrafiltration module, 2 CEB dosing systems, piping, auto valves and one backwash pump mounted on a MSEP skid with a microprocessor based control panel.
                 </p>
