@@ -12,6 +12,7 @@ const customerLogos = [
   '2.png',
   '3.png',
   '4.png',
+  '5.png',
   '6.jpg',
   '7.png',
   '8.png',
@@ -20,8 +21,6 @@ const customerLogos = [
   '11.png',
   '12.png',
   '14.png',
-  '15.png',
-  '16.png',
   '17.png',
   '18.png',
   '19.png',
@@ -93,6 +92,7 @@ const customerLogos = [
   // Auto-rotate customer logos (3 at a time)
   useEffect(() => {
     console.log(`Total logos: ${customerLogos.length}, Groups: ${Math.ceil(customerLogos.length / 3)}`);
+    console.log('Available logos:', customerLogos);
     const interval = setInterval(() => {
       setCurrentCustomerIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % Math.ceil(customerLogos.length / 3);
@@ -261,17 +261,33 @@ const customerLogos = [
                   <div key={slideIndex} className="w-full flex-shrink-0 flex justify-center">
                     <div className="flex w-full max-w-6xl justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 px-2 sm:px-4">
                       {customerLogos.slice(slideIndex * 3, (slideIndex + 1) * 3).map((logo, logoIndex) => (
-                        <div key={logoIndex} className="flex-1 max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-xs">
-                          <div className="bg-white dark:bg-gray-800 p-2 sm:p-3 md:p-4 lg:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 flex items-center justify-center">
+                        <div key={logoIndex} className="flex-1 max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[280px] xl:max-w-xs">
+                          <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 flex items-center justify-center border border-gray-200 dark:border-gray-700">
                             <img 
                               src={`/Customer/${logo}`}
                               alt={`Customer ${slideIndex * 3 + logoIndex + 1}`}
-                              className="max-w-full max-h-full object-contain"
+                              className="w-full h-full object-contain filter-none transition-opacity duration-300"
                               style={{
-                                minHeight: '40px',
-                                minWidth: '40px',
-                                maxHeight: '60px',
-                                maxWidth: '60px'
+                                minHeight: '60px',
+                                minWidth: '60px',
+                                maxHeight: '100px',
+                                maxWidth: '100px',
+                                objectFit: 'contain'
+                              }}
+                              onError={(e) => {
+                                console.log(`Failed to load: /Customer/${logo}`);
+                                e.target.style.opacity = '0.3';
+                                e.target.alt = `Logo not available - ${logo}`;
+                                // Show a placeholder for missing logos
+                                const placeholder = document.createElement('div');
+                                placeholder.className = 'w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded flex items-center justify-center text-gray-400 text-xs';
+                                placeholder.textContent = 'Logo';
+                                e.target.parentNode.appendChild(placeholder);
+                                e.target.style.display = 'none';
+                              }}
+                              onLoad={(e) => {
+                                console.log(`Successfully loaded: /Customer/${logo}`);
+                                e.target.style.opacity = '1';
                               }}
                             />
                           </div>
