@@ -50,10 +50,10 @@ export const COMPANY_INFO = {
   socialMedia: {
     instagram: "https://instagram.com/ssws_official",
     facebook: "https://facebook.com/ssws.official",
-    whatsapp: "https://wa.me/919850813593",
-    linkedin: "https://linkedin.com/company/ssws",
-    twitter: "https://twitter.com/ssws_official",
-    youtube: "https://youtube.com/@ssws_official"
+    whatsapp: "https://wa.me/919373365969",
+    linkedin: "https://linkedin.com/company/",
+    twitter: "https://twitter.com/",
+    youtube: "https://youtube.com/"
   },
   
   // Services
@@ -116,7 +116,7 @@ export const COMPANY_INFO = {
     "Qualified Personnel",
     "Never Compromise on Quality",
     "Sustainable Solutions",
-    "2000+ RO Plants Installed",
+    "500+ RO Plants Installed",
     "Multiple Service Centers",
     "Ready Stock Available",
     "Patent Technologies"
@@ -146,7 +146,7 @@ export const COMPANY_INFO = {
   whyChooseUs: [
     "Patent of various technologies and design copy right",
     "Maximum number of staff members to attend customers",
-    "2000+ RO Plants installed all over Maharashtra & India",
+    "500+ RO Plants installed all over Maharashtra & India",
     "Service available in multiple cities",
     "Quality Material and delivers best performance projects",
     "Always keeps almost all equipments/material in stock (Ready to Dispatch)"

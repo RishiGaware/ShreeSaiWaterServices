@@ -28,11 +28,21 @@ const VisionMission = () => {
     }
   ];
 
-  const qualityMaterials = [
-    'Made in Taiwan Membrane/cartridge',
-    'RO + UV System Plant',
-    'Platinum Plates made in Japan for Ionizer machines'
-  ];
+  const materialsCommitment = {
+    title: 'Materials Commitment',
+    description: 'We source only certified, industry-standard raw materials from trusted suppliers.',
+    policies: [
+      'All materials comply with national and international quality standards (ISI, ISO, NSF, etc.)',
+      'We use corrosion-resistant and food-grade materials to ensure safety and longevity',
+      'Components are selected for high mechanical strength and durability, even in demanding industrial conditions',
+      'Preference is given to energy-efficient and eco-friendly materials to support sustainable solutions',
+      'Every batch of materials undergoes stringent incoming quality inspection before use',
+      'Traceability of material sourcing is maintained for accountability and reliability',
+      'Regular audits are conducted to ensure zero compromise on quality and safety',
+      'We continually upgrade our material selection process to adopt the latest innovations in water treatment technology',
+      'Our policy ensures that only materials with proven performance are integrated into our systems'
+    ]
+  };
 
   const responsibilities = [
     'Design and Engineering Consultancy',
@@ -161,33 +171,45 @@ const VisionMission = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className={`${themeClasses.card} p-8`}>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-6`}>
-                  Quality Materials
-                </h3>
-                <ul className="space-y-3">
-                  {qualityMaterials.map((material, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                      <span className={`${themeClasses.text.secondary}`}>{material}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className={`${themeClasses.card} p-8`}>
+              <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-6`}>
+                Our Responsibilities
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {responsibilities.map((responsibility, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <span className={`${themeClasses.text.secondary}`}>{responsibility}</span>
+                  </div>
+                ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-              <div className={`${themeClasses.card} p-8`}>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-6`}>
-                  Our Responsibilities
-                </h3>
-                <ul className="space-y-3">
-                  {responsibilities.map((responsibility, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                      <span className={`${themeClasses.text.secondary}`}>{responsibility}</span>
-                    </li>
-                  ))}
-                </ul>
+      {/* Materials Commitment */}
+      <div className={`py-16 sm:py-20 ${themeClasses.background.secondary}`}>
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${themeClasses.text.primary} mb-4`}>
+                {materialsCommitment.title}
+              </h2>
+              <p className={`text-lg ${themeClasses.text.secondary} max-w-3xl mx-auto`}>
+                {materialsCommitment.description}
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div className={`${themeClasses.card} p-8`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {materialsCommitment.policies.map((policy, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <span className={`${themeClasses.text.secondary} leading-relaxed`}>{policy}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

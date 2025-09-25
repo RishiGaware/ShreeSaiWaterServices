@@ -10,35 +10,24 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
-      name: 'Quality Certification',
-      description: 'Professional certification demonstrating our commitment to quality and excellence in water treatment solutions.',
-      issuedBy: 'Certification Authority',
-      validUntil: '2025-12-31',
+      name: 'GST Certificate of Appreciation 2021',
+      description: 'Government recognition from the Central Board of Indirect Taxes and Customs for our outstanding contribution to the economy through prompt GST filing and tax payments. This certificate acknowledges our GST registration number 27ALQPP8592H1Z6 and our substantial contribution to building a strong and resilient nation.',
+      issuedBy: 'Ministry of Finance, Government of India',
+      validUntil: 'Ongoing',
       image: Certificate1,
-      category: 'Quality Certification'
+      category: 'Government Recognition'
     },
     {
       id: 2,
-      name: 'Industry Recognition',
-      description: 'Industry recognition for our expertise and compliance with international standards in water treatment technology.',
-      issuedBy: 'Industry Standards Board',
-      validUntil: '2025-12-31',
+      name: 'Income Tax Certificate of Appreciation 2016-17',
+      description: 'Government recognition from the Central Board of Direct Taxes for our contribution to the nation through timely income tax payments and filing. This certificate acknowledges our PAN ALQPP8592H and places us in the Bronze category for our tax contribution towards building this great nation.',
+      issuedBy: 'Central Board of Direct Taxes, Ministry of Finance',
+      validUntil: 'Ongoing',
       image: Certificate2,
-      category: 'Industry Recognition'
-    },
-    // {
-    //   id: 3,
-    //   name: 'GST Certificate of Appreciation 2021',
-    //   description: 'Government recognition for our contribution to the economy and compliance with tax regulations.',
-    //   issuedBy: 'Government of India',
-    //   validUntil: 'Ongoing',
-    //   image: '/GST CERTIFICATE OF APPRECIATION 2021.pdf',
-    //   category: 'Government Recognition',
-    //   isPdf: true
-    // }
+      category: 'Government Recognition'
+    }
   ];
 
-  const categories = ['All', 'Quality Certification', 'Industry Recognition', 'Government Recognition'];
 
   return (
     <div className={`min-h-screen ${themeClasses.background.primary} ${themeClasses.text.primary}`}>
@@ -168,7 +157,7 @@ const Certificates = () => {
                         </span> */}
                       </div>
                     </div>
-                    {/* {cert.isPdf && (
+                    {cert.isPdf && (
                       <div className="mt-4">
                         <a
                           href={cert.image}
@@ -182,7 +171,7 @@ const Certificates = () => {
                           </svg>
                         </a>
                       </div>
-                    )} */}
+                    )}
                   </div>
                 </div>
               ))}
