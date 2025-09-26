@@ -302,30 +302,6 @@ const Navbar = () => {
             </div>
 
             <Link
-              to="/gallery"
-              className={`block px-4 py-3 rounded-lg font-medium text-sm transition-colors duration-200 ${
-                isActive('/gallery') 
-                  ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
-                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
-              }`}
-              onClick={handleMobileNavigation}
-            >
-              Gallery
-            </Link>
-
-            <Link
-              to="/blog"
-              className={`block px-4 py-3 rounded-lg font-medium text-sm transition-colors duration-200 ${
-                isActive('/blog') 
-                  ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
-                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
-              }`}
-              onClick={handleMobileNavigation}
-            >
-              Blog
-            </Link>
-
-            <Link
               to="/contact"
               className={`block px-4 py-3 rounded-lg font-medium text-sm transition-colors duration-200 ${
                 isActive('/contact') 

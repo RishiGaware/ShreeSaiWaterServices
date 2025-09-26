@@ -48,11 +48,11 @@ export const COMPANY_INFO = {
   
   // Social Media Links
   socialMedia: {
-    instagram: "https://instagram.com/ssws_official",
-    facebook: "https://facebook.com/ssws.official",
+    instagram: "https://www.instagram.com/shree_sai_water_services",
+    facebook: "https://www.facebook.com/profile.php?id=61581235900466",
     whatsapp: "https://wa.me/919373365969",
-    linkedin: "https://linkedin.com/company/",
-    twitter: "https://twitter.com/",
+    // linkedin: "https://linkedin.com/company/",
+    twitter: "https://x.com/shree_sai_water",
     youtube: "https://youtube.com/"
   },
   
