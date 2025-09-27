@@ -224,9 +224,7 @@ const Navbar = () => {
 
           {/* Dark Mode Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <DarkModeToggle />
             
-            {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"

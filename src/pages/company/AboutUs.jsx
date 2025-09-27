@@ -82,32 +82,32 @@ const AboutUs = () => {
                 </p>
               </div>
               
-              <div className={`${themeClasses.card} p-8`}>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Company Details</h3>
+              <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8`}>
+                <h3 className={`text-lg sm:text-xl font-bold ${themeClasses.text.primary} mb-4`}>Company Details</h3>
                 <div className="space-y-3">
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Established:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>2004</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Established:</span>
+                    <span className={`sm:ml-2 ${themeClasses.text.secondary} text-sm sm:text-base`}>2004</span>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}> GST Registration:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>2016</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>GST Registration:</span>
+                    <span className={`sm:ml-2 ${themeClasses.text.secondary} text-sm sm:text-base`}>2016</span>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Experience:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>20+ years</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Experience:</span>
+                    <span className={`sm:ml-2 ${themeClasses.text.secondary} text-sm sm:text-base`}>20+ years</span>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>GSTIN:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.business.gstin}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>GSTIN:</span>
+                    <span className={`${themeClasses.text.secondary} text-xs sm:text-sm break-all`}>{COMPANY_INFO.business.gstin}</span>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>PAN:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.business.pan}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>PAN:</span>
+                    <span className={`${themeClasses.text.secondary} text-xs sm:text-sm break-all`}>{COMPANY_INFO.business.pan}</span>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Contact Person:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.contactPerson}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Contact Person:</span>
+                    <span className={`${themeClasses.text.secondary} text-sm sm:text-base break-words`}>{COMPANY_INFO.contact.contactPerson}</span>
                   </div>
                 </div>
               </div>
@@ -130,27 +130,27 @@ const AboutUs = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔮</div>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Vision</h3>
-                <p className={`${themeClasses.text.secondary} leading-relaxed`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
+                <div className="text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔮</div>
+                <h3 className={`text-lg sm:text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Vision</h3>
+                <p className={`${themeClasses.text.secondary} leading-relaxed text-sm sm:text-base`}>
                   {COMPANY_INFO.vision}
                 </p>
               </div>
 
-              <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Mission</h3>
-                <p className={`${themeClasses.text.secondary} leading-relaxed`}>
+              <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
+                <div className="text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+                <h3 className={`text-lg sm:text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Mission</h3>
+                <p className={`${themeClasses.text.secondary} leading-relaxed text-sm sm:text-base`}>
                   {COMPANY_INFO.mission}
                 </p>
         </div>
 
-              <div className={`${themeClasses.card} p-8 text-center hover:shadow-xl transition-all duration-300 group`}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💎</div>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Values</h3>
-                <p className={`${themeClasses.text.secondary} leading-relaxed`}>
+              <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8 text-center hover:shadow-xl transition-all duration-300 group md:col-span-2 lg:col-span-1`}>
+                <div className="text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💎</div>
+                <h3 className={`text-lg sm:text-xl font-bold ${themeClasses.text.primary} mb-4`}>Our Values</h3>
+                <p className={`${themeClasses.text.secondary} leading-relaxed text-sm sm:text-base`}>
                   {COMPANY_INFO.values}
                 </p>
               </div>
@@ -173,18 +173,18 @@ const AboutUs = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div className={`${themeClasses.card} p-8 text-center`}>
-              <div className="text-6xl mb-6">🏆</div>
-              <h3 className={`text-2xl font-bold ${themeClasses.text.primary} mb-4`}>
+            <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8 text-center`}>
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6">🏆</div>
+              <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${themeClasses.text.primary} mb-3 sm:mb-4`}>
                 {COMPANY_INFO.recognition.ministry}
               </h3>
-              <h4 className={`text-xl font-semibold ${themeClasses.text.primary} mb-4`}>
+              <h4 className={`text-base sm:text-lg lg:text-xl font-semibold ${themeClasses.text.primary} mb-3 sm:mb-4`}>
                 {COMPANY_INFO.recognition.department}
               </h4>
-              <div className={`text-lg ${themeClasses.text.accent} mb-4`}>
+              <div className={`text-sm sm:text-base lg:text-lg ${themeClasses.text.accent} mb-3 sm:mb-4`}>
                 {COMPANY_INFO.recognition.category}
               </div>
-              <p className={`text-lg ${themeClasses.text.secondary} max-w-4xl mx-auto`}>
+              <p className={`text-sm sm:text-base lg:text-lg ${themeClasses.text.secondary} max-w-4xl mx-auto`}>
                 {COMPANY_INFO.recognition.description}
               </p>
             </div>
@@ -206,17 +206,17 @@ const AboutUs = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {services.map((service, index) => (
-                <div key={index} className={`${themeClasses.card} p-6 hover:shadow-xl transition-all duration-300 group`}>
+                <div key={index} className={`${themeClasses.card} p-4 sm:p-6 hover:shadow-xl transition-all duration-300 group`}>
                   <div className="text-center">
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-                    <h3 className={`text-lg font-bold ${themeClasses.text.primary} mb-3`}>
+                    <h3 className={`text-base sm:text-lg font-bold ${themeClasses.text.primary} mb-2 sm:mb-3`}>
                       {service.name}
                     </h3>
-                    <p className={`text-sm ${themeClasses.text.secondary} leading-relaxed`}>
+                    <p className={`text-xs sm:text-sm ${themeClasses.text.secondary} leading-relaxed`}>
                       {service.description}
                     </p>
                   </div>
@@ -241,10 +241,10 @@ const AboutUs = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
               {industries.map((industry, index) => (
-                <div key={index} className={`${themeClasses.card} p-4 text-center hover:shadow-lg transition-all duration-300 group`}>
-                  <span className={`text-sm font-medium ${themeClasses.text.primary} group-hover:text-blue-600 transition-colors duration-300`}>
+                <div key={index} className={`${themeClasses.card} p-3 sm:p-4 text-center hover:shadow-lg transition-all duration-300 group`}>
+                  <span className={`text-xs sm:text-sm font-medium ${themeClasses.text.primary} group-hover:text-blue-600 transition-colors duration-300 break-words leading-tight`}>
                     {industry}
                   </span>
               </div>
@@ -268,47 +268,49 @@ const AboutUs = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className={`${themeClasses.card} p-8`}>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8`}>
+                <h3 className={`text-lg sm:text-xl font-bold ${themeClasses.text.primary} mb-4`}>
                   Head Office
                 </h3>
                 <div className="space-y-3">
                   <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Address:</span>
-                    <p className={`${themeClasses.text.secondary} mt-1`}>
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Address:</span>
+                    <p className={`${themeClasses.text.secondary} mt-1 text-sm sm:text-base leading-relaxed break-words`}>
                       {COMPANY_INFO.contact.address}
                     </p>
                   </div>
-                  {/* <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Alternative Address:</span>
-                    <p className={`${themeClasses.text.secondary} mt-1`}>
-                      {COMPANY_INFO.contact.addressSecondary}
-                    </p>
-                  </div> */}
                 </div>
               </div>
 
-              <div className={`${themeClasses.card} p-8`}>
-                <h3 className={`text-xl font-bold ${themeClasses.text.primary} mb-4`}>
+              <div className={`${themeClasses.card} p-4 sm:p-6 lg:p-8`}>
+                <h3 className={`text-lg sm:text-xl font-bold ${themeClasses.text.primary} mb-4`}>
                   Contact Details
                 </h3>
                 <div className="space-y-3">
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Phone:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.phone}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Phone:</span>
+                    <a href={`tel:${COMPANY_INFO.contact.phone}`} className={`${themeClasses.text.secondary} text-sm sm:text-base break-all hover:text-blue-600 transition-colors duration-200`}>
+                      {COMPANY_INFO.contact.phone}
+                    </a>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Email:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.email}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Email:</span>
+                    <a href={`mailto:${COMPANY_INFO.contact.email}`} className={`${themeClasses.text.secondary} text-sm sm:text-base break-all hover:text-blue-600 transition-colors duration-200`}>
+                      {COMPANY_INFO.contact.email}
+                    </a>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Website:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.website}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Website:</span>
+                    <span className={`${themeClasses.text.secondary} text-sm sm:text-base break-all`}>
+                      {COMPANY_INFO.contact.website}
+                    </span>
                   </div>
-                  <div>
-                    <span className={`font-semibold ${themeClasses.text.primary}`}>Contact Person:</span>
-                    <span className={`ml-2 ${themeClasses.text.secondary}`}>{COMPANY_INFO.contact.contactPerson}</span>
+                  <div className="flex flex-col">
+                    <span className={`font-semibold ${themeClasses.text.primary} text-sm sm:text-base`}>Contact Person:</span>
+                    <span className={`${themeClasses.text.secondary} text-sm sm:text-base break-words`}>
+                      {COMPANY_INFO.contact.contactPerson}
+                    </span>
                   </div>
                 </div>
               </div>
