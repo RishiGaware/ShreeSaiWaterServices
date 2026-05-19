@@ -1,6 +1,10 @@
-# SSWS - Sustainable Water Solutions
+# Shree Sai Water Services
 
 A modern, responsive corporate website built with React, Vite, and TailwindCSS.
+
+## 🌐 Official Website
+
+https://www.shreesaiwaterservices.com/
 
 ## 🚀 Features
 
@@ -186,4 +190,4 @@ For technical support or questions, please contact the development team.
 
 ---
 
-**SSWS** - Leading the way in sustainable water solutions.
+**Shree Sai Water Services** - Leading the way in sustainable water solutions.
